@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forme 2</title>
+</head>
+<body>
+    <h1>Forme 2</h1>
+    <form name="probnaForma" method="get" action="posalji.html">
+        <table border="1">
+            <tr>
+                <td>ime i prezime</td>
+                <td><input type="name" value="marija" disabled></td>
+            </tr>
+            <tr> 
+                <td> Korisničko ime: </td>
+                <td> <input type="text" name="username" placeholder="username" size="10" maxlength="8"> </td>
+            </tr>
+            <tr> 
+                <td> Lozinka: </td>
+                <td> <input type="text" name="password" placeholder="password" size="10" maxlength="8"> </td>
+            </tr>
+       
+        <tr>
+            <td>Navija za:</td>
+            <td>
+                <ul>
+                    <li>
+                        <label for="id1">Metaloplastika</label>
+                        <input type="radio" name="klub" value="mp" checked id="id1"/> 
+                    </li>
+                    <li>
+                        <input type="radio" name="klub" value="cz"/> Crvena Zvezda
+                    </li>
+                    <li>
+                        <input type="radio" name="klub" value="pz"/> Partizan
+                    </li>
+                </ul>
+            </td>
+        </tr>        
+
+        <tr>
+            <td colspan="2">
+                Omiljena hrana: 
+                <select name="food">
+                    <option>odaberite hranu:</option>
+                    <option>srpska</option>
+                    <option>kineska</option>
+                    <option>italijanska</option>
+                    <option>mediteranska</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Omiljena muzika: </td>
+            <td>
+                <select name="music" multiple size="8">
+                    <option value="k">klasika</option>
+                    <option value="r" selected>rok</option>
+                    <option selected>metal</option>
+                    <option value="s">soul</option>
+                    <option>dens</option>
+                    <option value="e">etno</option>
+                    <option>tehno</option>
+                    <option>sve</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Hobi:
+            </td>
+            <td>
+                <input type="checkbox" name="hobi" value="knjige"/>
+                Čitanje knjiga
+                <br>
+                <input type="checkbox" name="hobi" value="filmovi"/>
+                Gledanje filmova
+                <br>
+                <input type="checkbox" name="hobi" value="sport"/>
+                Treninzi
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                Komentar:
+                <textarea name="comment" cols="20" rows="5" maxlength="300">
+                    Unesi komentar - najviše 300 znakova
+                </textarea>
+                <br>
+                Imejl adresa:
+                <input type="email" name="imejl adresa">
+                <br>
+                Boja: <input type="color" name="boja">
+                <br>
+                Datum: <input type="date" name="rođendan" min="1901-01-01" max="2051-12-31">
+                <br>
+                Vreme: <input type="time" name="vreme">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                <input name="dugme1" type="submit" value="SEND"/>
+                <input name="dugme2" type="reset" value="CLEAR"/>
+                <input name="dugme3" type="button" value="MojeDugme"
+                onClick="alert('Hello')"/>
+            </td>
+        </tr>
+
+    </table>
+    </form>
+</body>
+</html>

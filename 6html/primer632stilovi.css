@@ -1,0 +1,51 @@
+body {
+    background-image: url("desktop.jpeg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+}
+
+h1, h2, .rozeSlova {
+    color: darkmagenta;
+}
+
+.podebljanaSlova {
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: dashed;
+    text-shadow: 4px 4px 4px yellow;
+    color: violet;
+}
+
+h3 {
+    color: rgb(43, 208, 226);
+}
+
+h3.podebljanaSlova {
+    background-color: rgb(211, 74, 133);
+}
+
+p.podebljanaSlova, h2 {
+    background-color: bisque;
+}
+
+#t3 {
+    color: goldenrod;
+    background-color: blue;
+}
+
+.mojStil {
+    color: rgb(178, 250, 33) /*!important;*/
+}
+
+div {
+    color: azure;
+}
+
+/*
+id > class > tag
+*/
