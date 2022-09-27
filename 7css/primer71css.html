@@ -5,7 +5,8 @@
         h1 {
             color: red;
             text-align: center;
-            font-weight: bold;          
+            font-weight: bold;
+            padding-top: 50px;          
         }
         h2 {
             letter-spacing: -2px;
@@ -55,7 +56,11 @@
         }
         table, td, th {
             border: 2px solid green;
-            pad: 10px;
+            border-style: dotted;
+            border-top: 10px solid rebeccapurple;
+            border-top-width: 5px;
+            border-color: magenta;
+            padding: 10px;
             background-color: antiquewhite;
         }
         table {
@@ -67,6 +72,14 @@
         body {
             font-family: 'Courier New', Courier, monospace;
             text-align: left;
+        }
+        .klasa {
+            border: 5px solid green;
+            padding: 10px 15px 10px 5px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
     </style>
     <title>CSS</title>
@@ -148,5 +161,8 @@
             </td>
         </tr>
     </table>
+    <hr>
+    <div class="klasa">Probni tekst kako bismo utvrdili formatiranje teksta tra la la.</div>
+    Tekst bez ikakvog formatiranja, ispod poslednjeg diva, u dnu stranice.
 </body>
 </html>
