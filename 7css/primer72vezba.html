@@ -2,9 +2,93 @@
 <html lang="en">
 <head>
    <title>Proba100</title>
-   <style type="text/css"></style>
+   <style type="text/css">
+    h1 {
+        letter-spacing: 10px;
+    }
+    body {
+        background-color: blanchedalmond;
+    }
+    .pasus {
+        text-decoration: underline;
+    }
+    a:link {
+            color: plum;
+        }
+        a:visited {
+            color: red;
+        }
+        a:hover {
+            color: green;
+        }
+        a:active {
+            color: orange;
+        }
+        a:active.link {
+            color: orangered;
+        }
+        table, th, td {
+            border: 2px dashed dodgerblue;
+            background-color: bisque;
+            width: 50%;
+            height: fit-content;
+            text-align: center; 
+        }
+        td {
+            
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        tr:nth-child(even) {
+            background: #008000;
+        }
+        tr:nth-child(odd) {
+            background: #adff2f;
+        }
+
+   </style>
 </head>
 <body>
-    
+    <h1>Naslov</h1>
+    <p>Zadatak: Pasus s podvučenim tekstom, link koji je druge boje za hover, i tabela s uokvirenim elementima i ćelijama, gde je svaka ćelija plave boje. </p>
+    <hr>
+    <p class="pasus">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie elit at risus malesuada, non feugiat leo facilisis. Duis ultrices lectus ac nulla convallis, ut luctus nulla molestie. Mauris euismod urna magna, eget eleifend justo luctus vitae. Fusce porta ligula eu condimentum laoreet. Curabitur a urna diam. Ut nec ex at metus feugiat sagittis eu quis orci. Vivamus magna magna, aliquam efficitur tellus quis, gravida tempus diam. Cras quis porttitor purus, vitae laoreet mauris. Sed eu justo sem. Aliquam eleifend elit ut nunc tristique sagittis.
+    </p>
+    <hr>
+    <p>
+        <a class="link" href="https://www.github.com">Github</a>
+    </p>
+    <hr>
+    <table>
+        <tr>
+            <th>boja</th>
+            <th>predmet</th>
+        </tr>
+        <tr>
+            <td>
+                crvena
+            </td>
+            <td>
+                olovka
+            </td>
+        </tr>
+        <tr>
+            <td>
+                plava
+            </td>
+            <td>
+                sveska
+            </td>
+        </tr>
+        <tr>
+            <td>
+                zelena
+            </td>
+            <td>
+                trava
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
