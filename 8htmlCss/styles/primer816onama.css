@@ -1,0 +1,17 @@
+#centralni {
+    height: 75%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#reklamniVideo {
+    width: 80%;
+    margin: auto;
+}
+
+video {
+    width: 100%;
+    border:3px greenyellow solid;
+    border-radius: 10px;
+    margin: 20px;
+}
