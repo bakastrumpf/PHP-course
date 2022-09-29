@@ -50,11 +50,34 @@ footer {
     border-radius: 10px;
 }
 
-#navigacija {}
+#navigacija {
+    float: right;
+}
 
-.navLink {}
+.article {
+    background-color: white;  
+    border: rgb(203, 203, 203) 1px;
+    text-align: left;
+    text-indent: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 75%;
+    transition: transform 0.5s;
+}
 
-.article {}
+.article:hover {
+    background-color: rgb(178, 248, 146);
+    border: greenyellow 3px solid;
+    transform: scale(1.09);
+}
+
+.navLink {
+    
+}
+
+
 
 #vest1 {}
 
