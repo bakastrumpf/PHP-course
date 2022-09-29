@@ -1,3 +1,8 @@
+body {
+    background-color: azure;
+    background-image: url("../8htmlCss/resources/images17.jpg");
+}
+
 #wrapper {
 
 }
@@ -27,5 +32,5 @@
 }
 
 #vest3 {
-    
+
 }
