@@ -50,10 +50,6 @@ footer {
     border-radius: 10px;
 }
 
-#navigacija {
-    float: right;
-}
-
 .article {
     background-color: white;  
     border: rgb(203, 203, 203) 1px;
@@ -73,14 +69,45 @@ footer {
     transform: scale(1.09);
 }
 
-.navLink {
-    
+.article img {
+    float: right;
+    margin: 5px;
+    padding: 5px;
 }
 
+#navigacija {
+    float: right;
+    width: 20%;
+    background-color: rgb(65, 146, 65);
+    border: 2px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+}
 
+#navigacija ul {
+    list-style-type: none;
+    text-align: left;
+    margin-bottom: 25px;
+}
 
-#vest1 {}
+#navigacija li {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
 
-#vest2 {}
+.navLink {
+    background-color: azure;
+    padding: 5px;
+    color: gray;
+    text-decoration: double;
+    border-radius: 5px;    
+}
 
-#vest3 {}
+.navLink:hover {
+    border: rgb(40, 51, 40) solid 1px;
+    border-radius: 5px;
+    background-color: rgb(157, 175, 129);
+    color: black;
+}
