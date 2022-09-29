@@ -4,33 +4,60 @@ body {
 }
 
 #wrapper {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
 
+header {
+    background-image: url(../resources/grass.png);
+    background-size: cover;
+    height: 150px;
+    border: 3px solid greenyellow;
+    border-radius: 5px;
+}
+
+footer {
+    border: 3px solid goldenrod;
+    border-radius: 5px;
+    width: 100%;
+    background-color: blanchedalmond;
+    font-size: 16px;
+    color: rgb(59, 9, 9);
+    padding: 7px;
 }
 
 .topMenu {
-
+    background-color: rgb(65, 146, 65);
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
-#navigacija {
-    
+.topMenu a {
+    font-size: 16px;
+    padding: 15px;
+    color: white;
+    float: left;
+    text-decoration: none;
 }
 
-.navLink {
-
+.topMenu a:hover {
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 10px;
 }
 
-.article {
+#navigacija {}
 
-}
+.navLink {}
 
-#vest1 {
+.article {}
 
-}
+#vest1 {}
 
-#vest2 {
+#vest2 {}
 
-}
-
-#vest3 {
-
-}
+#vest3 {}
