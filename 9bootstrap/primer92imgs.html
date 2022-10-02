@@ -7,17 +7,116 @@
         Bootstrap+images
     </title>
 
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
+
+    <style type="text/css">
+        hr {
+            color: black;
+            width: 50%;
+        }
+    </style>
+
 </head>
 
 <body>
-    <div class="container-fluid">
+    <di v class="container-fluid">
         <h1>Naslov | fluid</h1>
+        <hr>
+        <br>
+        Primer teksta (veličina + boja):
+        <hr>
+        <br>
+        <span class="text-info">Primer nekog teksta.</span>
+        <span class="text-muted  display-6">Primer još teksta.</span>
+
+        <hr>
+
+        <table class="table table-striped table-hover">
+            <br>
+            Primer tabele:
+            <br>
+            <br>
+            <tr>
+                <th>naslov 1</th>
+                <th>naslov 2</th>
+            </tr>
+            <tr>
+                <td>polje 1</td>
+                <td>polje 2</td>
+            </tr>
+            <tr>
+                <td>polje 3</td>
+                <td>polje 4</td>
+            </tr>
+            <tr>
+                <td>polje 5</td>
+                <td>polje 6</td>
+            </tr>
+
+        </table>
+        <br>
+        <hr>
+        Primer dugmića:
+        <br>
+        <br>
+        <button class="btn btn-sm btn-outline-success">
+            nastavi
+        </button>
+
+        <button class="btn btn-md btn-warning">
+            uspori
+        </button>
+
+        <button class="btn btn-lg btn-outline-danger">
+            stoj!
+        </button>
+
+        <button class="btn btn-primary">
+            <span class="badge bg-danger d-inline-block m-2 p-2">32</span>
+            <span class="d-inline-block">Poruke</span>
+        </button>
+
+        <div class="alert alert-success alert-dismisible">
+            <button class="btn-close" data-bs-dismiss="alert"> </button>
+            <strong>
+                Čestitamo!
+            </strong>
+            Uspešno ste se registrovali.
+        </div>
+
+        <br>
+        <hr>
+        <br>
+        <div class="progress">
+            <div class="progress-bar bg-info" style="width: 25%;">
+                25%
+            </div>
+            <div class="progress-bar bg-warning" style="width: 75%;">
+                75%
+            </div>
+            <div class="progress-bar bg-danger" style="width: 90%;">
+                90%
+            </div>
+
+
+
+
+        </div>
+
+        <hr>
+        <br>
+
+        Primer prilagođenog prikaza slika:
+
+        <br>
+
         <div class="row">
+
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-2">
                 <img src="images/1.jpg" style="width: 100%;">
             </div>
@@ -26,7 +125,7 @@
                 <img src="images/2.jpg" style="width: 100%;">
             </div>
 
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-2">
+            <div class="col-12 col-sm-4 col-md-3 col-lg-2 p-2">
                 <img src="images/3.jpg" style="width: 100%;">
             </div>
 
@@ -37,13 +136,30 @@
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-2">
                 <img src="images/5.jpg" style="width: 100%;">
             </div>
-            
+
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-2">
                 <img src="images/6.jpg" style="width: 100%;">
             </div>
 
         </div>
-    </div>
+        </div>
 </body>
 
 </html>
+
+<!--
+    button { color: "red" } // 1 poen
+    .btn { color: "green" } // 10 poena
+    .btn-success { color: "brown" } // 10 poena
+    #id {color: "blue" } // 100 poena
+
+    button.btn { color: "yellow" } 1 + 10 = 11 poena
+    button.btn.btn-success { color: "orange" } 1 + 10 + 20 = 21 poen
+
+<button></button>
+<button id="dugme" ></button>
+<button id="dugme" class="btn"></button>
+<button id="dugme" class="btn-success"></button>
+<a class="btn"></a>
+
+-->
