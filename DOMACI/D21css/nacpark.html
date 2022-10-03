@@ -1,12 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Prekvalifikacije, ETF, PHP, html5, css" />
+    <meta name="author" content="Marija Savić" />
+    <meta name="description" content="PHP: osnove HTMLa | zadatak6" />
     <title>Nacionalni parkovi Srbije</title>
+    <style type="text/css">
+        #wrapper {
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            text-align: center;
+        }
+        #uvodneSlike {
+            height: 200px;
+            margin: 5px;
+        }
+        header {
+            background-color: #001a00;
+            color: white;
+            text-align: center;
+            height: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        h2 {
+            text-align: left;
+        }
+        h3 {
+            text-align: center;
+            color: #e6ffe6;
+        }
+        #navigacija {
+            float: left;
+            width: 25%;
+            height: 80%;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            background-color: #001a00;
+            overflow: hidden;
+            size: 10px;
+        }
+        #navigacija ul {
+            text-align: left;
+            margin-bottom: 25px;
+            color: #e6ffe6;
+        }
+        #navigacija li {
+            text-align: left;
+            color: #e6ffe6;
+        }
+        .items {
+            width: 74%;
+            float: right;
+            margin-top: 10px;
+        }
+        .post {
+            border: dotted 2px #001a00;
+            background-color: #e6ffe6;
+            text-align: justify;
+            padding: 10px;
+
+        }
+        #malaSlika {
+            height: 100px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div id="wrapper">
+        <header>
+            <i>
+                Национални паркови Србије
+            </i>
+        </header>
+
+        <div class="introImgs">
+            <img id="uvodneSlike" src="images/kopaonik.jpg" alt="Жичара на Копаонику">
+            <img id="uvodneSlike" src="images/tara.jpg" alt="Поглед на Тару">
+        </div>
+
+        <div class="" id="navigacija">
+            <h3>Мени</h3>
+            <ol>
+                <li>Национални паркови
+                    <ul>
+                        <li>
+                            <a href="#sarplanina">
+                                Шар планина
+                            </a>
+                            </li>
+                        <li>
+                            <a href="#fruskagora">
+                                Фрушка гора
+                            </a>
+                            </li>
+                    </ul>
+                </li>
+                <li>Смештај
+                    <ol>
+                        <li>Једнокреветне собе</li>
+                        <li>Трокреветне собе</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+
+        <div class="items">
+            <div class="post">
+                <h2>
+                    <a name="#fruskagora">
+                        Национални парк Фрушка гора
+                    </a>
+                </h2>
+                <p>
+                    Национални парк Фрушка гора се налази у Војводини, у Србији, недалеко од Новог Сада. Године 1960. је
+                    проглашен националним парком.
+                    <br>
+                    Највиши врх је Црвени Чот (539 m), а најзначајнији туристички центар Иришки венац. Пружа се
+                    дуж десне обале Дунава, дуга 78, а широка 15 km. Стварање планине почело је у мезозоику, пре 90
+                    милиона година; научници је називају „огледало геолошке прошлости“.[5] На њој су пронађене 164
+                    животињске фосилне врсте, старе око 123 милиона година. Флору Фрушке горе чини око 1500 биљних
+                    врста.
+                    <br>
+                    Фрушка гора богата је шумама храста, граба, букве, липе и другог дрвећа, са заштићених преко 50
+                    биљних врста.
+                    <br>
+                    На планини постоји и више археолошких налазишта (неолит, бакарно, бронзано и римско доба), као и
+                    стари фрушкогорски манастири (укупно 17), настали од краја 15. до 18. века, познати по специфичној
+                    архитектури, богатим ризницама, библиотекама и фрескама. Средиште управе Националног парка је у
+                    Сремској Каменици.
+                </p>
+                <div>
+                    <img id="malaSlika" src="images/fruska_gora1.jpg" alt="Падине Фрушке горе">
+                    <img id="malaSlika" src="images/fruska_gora2.jpg" alt="Планинарски дом на Фрушкој гори">
+                </div>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="post">
+                <h2> <a name="#sarplanina">
+                    Национални парк Шар-планина
+                </a>
+                    
+                </h2>
+                <p>
+                    Национални парк Шар-планина се налази на деловима општина Штрпце, Призрен, Сува Река и Качаник на
+                    Косову и Метохији.
+                    <br>
+                    Основан је 1986. године и површина националног парка је 22.805 ha. Национални парк је основан ради
+                    очувања: различитих облика глацијалног (циркови, морене глацијална језера и др.), периглацијалног
+                    (снежанички циркови, клизећи блокови, микрооблици тундра мозаика са дробинама и др.), крашког и
+                    флувијалног рељефа; хидролошких објеката и појава (речни токови, извори, потоци, тресаве и језера);
+                    шумских и високопланинских вегетација и њихових станишта (заједнице мунике, молике, кривуља, тресаве
+                    и високе зелени и др.); станишта и популације дивље флоре (хајдучица краља Александра, Николићев
+                    пуцавац, борнмилера, шарпланински каранфил и др.) и фауне, посебно богате фауне дневних лептира,
+                    птица (сиви соко, велики тетреб, јаребица камењарка, прдавац, балканска ушата шева), сисара (снежна
+                    и динарска волухарица, мрки медвед, вук, дивокоза и др.); предела са низом карактеристичних
+                    обележја; бројних објеката културне баштине који потичу из средњовековне српске државе (манастири
+                    Св. Арханђела, Св. Петра Коришког, Св. Богородице и цркве Св. Николе, Св. Петке, Св. Ђорђа и др.) и
+                    заштите и очувања спомен обележја.
+                </p>
+                <div>
+                    <img id="malaSlika" src="images/Sar_planina1.jpg" alt="Језеро на Шар-планини">
+                    <img id="malaSlika" src="images/Sar_planina2.jpg" alt="Планински врхови | Шар-планина">
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
+
 </html>
