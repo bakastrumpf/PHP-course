@@ -35,14 +35,123 @@
             </div>
         </div>
     </nav>
-  
+
     <div class="container">
         <div class="row">
             <div class="col-12">
-                Ovo je primer teksta na početnoj strani. Ovo je primer teksta na početnoj strani. Ovo je primer teksta na početnoj strani. Ovo je primer teksta na početnoj strani. Ovo je primer teksta na početnoj strani. Ovo je primer teksta na početnoj strani. Ovo je primer teksta na početnoj strani. Ovo je primer teksta na početnoj strani. Ovo je primer teksta na početnoj strani. Ovo je primer teksta na početnoj strani. 
+                <div id="mojeSlike" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#mojeSlike" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#mojeSlike" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#mojeSlike" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/slika1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/slika2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/slika3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#mojeSlike"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#mojeSlike"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
-      </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                        <img style="width: 60px" src="images/news.png" alt="...">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h3>News</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-world-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-world" type="button" role="tab" aria-controls="nav-world"
+                            aria-selected="true">World</button>
+                        <button class="nav-link" id="nav-science-tab" data-bs-toggle="tab" data-bs-target="#nav-science"
+                            type="button" role="tab" aria-controls="nav-science" aria-selected="false">Science</button>
+                        <button class="nav-link" id="nav-health-tab" data-bs-toggle="tab" data-bs-target="#nav-health"
+                            type="button" role="tab" aria-controls="nav-health" aria-selected="false">Health</button>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-world" role="tabpanel" aria-labelledby="nav-world-tab"
+                        tabindex="0">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <img src="images/world.png" style="width: 150px;">
+                            </div>
+                            <div class="flex-grow-1">
+                                Example world tab text times 15. Example world tab text times 15. Example world tab
+                                text times 15. Example world tab text times 15. Example world tab text times 15. Example
+                                world tab text times 15. Example world tab text times 15. Example world tab
+                                text times 15. Example world tab text times 15. Example world tab text times 15. Example
+                                world tab text times 15. Example world tab text times 15. Example world tab
+                                text times 15. Example world tab text times 15. Example world tab text times 15.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-science" role="tabpanel" aria-labelledby="nav-science-tab"
+                        tabindex="0">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <img src="images/science.jpeg" style="width: 150px;">
+                            </div>
+                            <div class="flex-grow-1">
+                                Example science tab text times 15. Example science tab text times 15. Example science
+                                tab text times 15. Example science tab text times 15. Example science tab text times 15.
+                                Example science tab text times 15. Example science tab text times 15. Example science
+                                tab text times 15. Example science tab text times 15. Example science tab text times 15.
+                                Example science tab text times 15. Example science tab text times 15. Example science
+                                tab text times 15. Example science tab text times 15. Example science tab text times 15.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-health" role="tabpanel" aria-labelledby="nav-health-tab"
+                        tabindex="0">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <img src="images/health.jpg" style="width: 150px;">
+                            </div>
+                            <div class="flex-grow-1">
+                                Example health tab text times 15. Example health tab text times 15. Example health tab text times 15. Example health tab
+                                text times 15. Example health tab text times 15. Example health tab text times 15. Example health tab text times 15.
+                                Example health tab text times 15. Example health tab text times 15. Example health tab text times 15. Example health tab
+                                text times 15. Example health tab text times 15. Example health tab text times 15. Example health tab text times 15.
+                                Example health tab text times 15.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--container-->
 
     <footer>
         <hr>
