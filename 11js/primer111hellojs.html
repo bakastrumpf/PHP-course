@@ -21,12 +21,37 @@
         document.write("<br><b><u>Neka nova poruka<br></u></b><br><hr><br>");
         var ime; //deklaracija promenljive
         ime = "Marija"; //promenljiva nazvana ime, s vrednošću nečijeg imena
+
         var brojKanc = 37; //promenljiva brojKanc s vrednošću 37
         brojKanc = 54; //redefinisanje vrednosti promenljive
+        brojKanc = "Lab 37A"; //vrednost je postala String umesto celog broja
+        brojKanc = 303.5; //promenljiva može da menja vrednost
+
+        brojTel = "064/1234-567"; //brojevi telefona su String jer imaju posebne znakove
         brojTel = 123456; //ceo broj
+        brojTel = 0123456; //nerealan broj
+
         prezime = "Savić"; //tekstualni podatak (String)
+
         document.write(ime + " sedi u kancu " + brojKanc + ".");
         document.writeln("<br>" + ime + " " + prezime + " sedi u kancu " + brojKanc + " i broj telefona joj je " + brojTel + ".");
+
+        // + operator sabiranja kad se radi s brojevima
+        // + operator konkatenacije kad su tekstualni podaci
+
+        document.write("<br>");
+        broj = 25; //ceo broj
+        broj2 = 50; //ceo broj
+        document.write(broj + broj2); //75
+        document.write("<br>");
+        document.write("<br>" + broj + broj2); //ponovo konkatenacija
+        document.write("<br>");
+        document.write("<br>" + (broj + broj2)); //zbir
+        document.write("<br>");
+        broj = 95; //ceo broj
+        broj2 = "50"; //String
+        document.write(broj + broj2); //9550 jer se tumači kao tekst
+
 
     </script>
     <h2>Danas je 6.10.2022. godine.</h2>
