@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+
+    <script>
+        //document.write("Tekst zaglavlja");
+        //primer da se komande u okviru skriptnog jezika izvršavaju bez obzira na to gde se u dokumentu nalaze:
+        //ovaj deo se ispisuje kao da je deo tela dokumenta
+    </script>
+</head>
+
+<body bgcolor="cyan">
+    <h1>Prvi primer</h1>
+    <!--komentar-->
+    <script language="JavaScript">
+        document.write("Dobro došli u svet JavaScripta!");
+        //<br>
+        document.write("<br><b><u>Neka nova poruka<br></u></b><br><hr><br>");
+        var ime; //deklaracija promenljive
+        ime = "Marija"; //promenljiva nazvana ime, s vrednošću nečijeg imena
+        var brojKanc = 37; //promenljiva brojKanc s vrednošću 37
+        brojKanc = 54; //redefinisanje vrednosti promenljive
+        brojTel = 123456; //ceo broj
+        prezime = "Savić"; //tekstualni podatak (String)
+        document.write(ime + " sedi u kancu " + brojKanc + ".");
+        document.writeln("<br>" + ime + " " + prezime + " sedi u kancu " + brojKanc + " i broj telefona joj je " + brojTel + ".");
+
+    </script>
+    <h2>Danas je 6.10.2022. godine.</h2>
+
+    <script src="primer112.js">
+        //document.write("Drugi primer s JS!");
+        //ovaj primer smo uvezli iz drugog dokumenta
+        /*
+        ovo je blok komentara u više linija 
+        */
+    </script>
+</body>
+
+</html>
