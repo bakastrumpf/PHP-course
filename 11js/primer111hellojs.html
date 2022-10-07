@@ -40,8 +40,8 @@
         // + operator sabiranja kad se radi s brojevima
         // + operator konkatenacije kad su tekstualni podaci
 
-        document.write("<br>");
-        document.write("<br>");
+        document.write("<hr>");
+
         broj = 25; //ceo broj
         broj2 = 50; //ceo broj
         document.write(broj + broj2); //75
@@ -54,42 +54,40 @@
         broj = 95; //ceo broj
         broj2 = "50"; //String
         document.write(broj + broj2); //9550 jer se tumači kao tekst
-        
+
         document.write("<hr>");
-        
+
         a = 56;
         b = 10;
         //b-- je postdekrement, prvo štampa pa umanji
-        document.write(a/b+10-6);
+        document.write(a / b + 10 - 6);
         document.write("<br>");
         document.write("<br>" + b--);
         document.write("<br>");
         document.write("<br>Novo b je: " + b);
         document.write("<br>");
-        //--a je predekrement prvo umanji a=a-1=55
+        //--a je predekrement, prvo umanji a=a-1=55 pa štampa
         document.write("<br>" + --a);
         document.write("<br>");
         document.write("<br>Novo a je: " + a);
         document.write("<br>");
         //nove vrednosti: a=55 i b=8
-        document.write(a/b+10-6);
+        document.write(a / b + 10 - 6);
 
         document.write("<hr>");
-
-        document.write(103 % 9 ); //ostatak pri deljenju
-
+        document.write(103 % 9); //ostatak pri deljenju
         document.write("<hr>");
 
+        //vrednost = 100; //ako zakomentarišemo deklarisanu vrednost, nemamo nad čime da vršimo operacije
         vrednost = 100;
-        vrednost *= 1,075; //vrednost + vrednost * 1.075
-        vrednost *= 1.075; //vrednost + vrednost * 1.075
-        vrednost +=20; //vrednost = vrednost + 20
+        vrednost *= 1, 075; //vrednost = vrednost * 1,075 - SRPSKI
+        vrednost *= 1.075; //vrednost = vrednost * 1.075
+        vrednost += 20; //vrednost = vrednost + 20
         document.write("<br>Vrednost množenja s dodeljivanjem je: " + vrednost);
         document.write("<br>Proba"); //ovo će se štampati ali će biti preskočena prethodna 4 reda ako nismo deklarisali 'vrednost'
 
-        vrednost /=0 //vrednost = vrednost / 0
+        vrednost /= 0 //vrednost = vrednost / 0
         document.write("<br>Vrednost=" + vrednost); //dobijamo beskonačnost
-        
         document.write("<hr>");
 
         //kontrola toka:
@@ -99,28 +97,32 @@
         // ! not (sth)
         uslov = true; //false 0, true 1
         brojIspita = 11;
-        
+
         //prost uslov
-        if(!uslov)
-        document.write("OK");
+        if (!uslov)
+            document.write("OK");
         else
-        document.write("not ok");
+            document.write("not ok");
+
         document.write("<br>");
+
         uslov = false;
         brojIspita = 11;
         document.write("<br>");
+
         //prost uslov
-        if(uslov)
-        document.write("OK");
+        if (uslov)
+            document.write("OK");
         else
-        document.write("not ok");
+            document.write("not ok");
+
         document.write("<br>");
 
         //kompleksan uslov
-        if(uslov=true&&brojIspita >= 10)
-        document.write("Student ulazi u novu školsku godinu");
+        if (uslov = true && brojIspita >= 10)
+            document.write("Student ulazi u novu školsku godinu");
         else
-        document.write("Student obnavlja godinu");
+            document.write("Student obnavlja godinu");
 
     </script>
     <h2>Danas je 6.10.2022. godine.</h2>
