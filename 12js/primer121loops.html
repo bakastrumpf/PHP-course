@@ -23,14 +23,13 @@
         // console.log(p + p + " = p = " + p + p);
         // console.log(p + p + " = p = " + p * p);
 
+        /*
         let passed = p > 55;
         let points = 67;
-
         console.log("Passed1: " + passed++);
         console.log("Passed2: " + passed);
-
-
         console.log(passed);
+        */
 
         /*
         if(p > 5){
@@ -55,7 +54,6 @@
 
         // true || biloSta = true
         // false && biloSta = false
-
         // points > 50 || points++ > 40 || /*passed++*/ > 0 
         // false || true || (true/false) = true
 
@@ -78,7 +76,6 @@
         } else {
             console.log("Student failed!");
         }
-
         */
 
         /*
@@ -101,7 +98,6 @@
                 console.log("Sedam");
             }
         }
-
         */
 
         //ternarni operator ?
@@ -130,7 +126,6 @@
                 break;
         }
         console.log("Switch je: " + msg);
-
         */
 
         /*
@@ -151,13 +146,13 @@
         }
         */
 
-        
-        let number1 = 1;
-        while(number1 <= 3){
-            console.log("End of while loop");
-            number1++;
-        }
-        
+        /*
+                let number1 = 1;
+                while (number1 <= 3) {
+                    console.log("End of while loop");
+                    number1++;
+                }
+                */
 
         // number = 1;
         // if (number <= 3) = true;
@@ -171,13 +166,96 @@
         // number++ => number = 4;
         // if (number <=3 ) => false;
 
+        /*
         let number = 10;
-        while(number >= 0){
+        while (number >= 0) {
             console.log(number);
             number -= 2;
         }
         console.log("This while loop ends with");
-        console.log("Number = " + number)
+        console.log("Number = " + number);
+*/
+        /*
+                let number = 1;
+                while (number < 10) {
+                    console.log(number);
+                    if (number == 5) {
+                        break;
+                    }
+                    number++;
+                }
+                console.log("End of WHILE loop 1");
+        
+                let number2 = 15;
+                while (number2 < 10) {
+                    console.log(number2);
+                    number2++;
+                }
+                console.log("End of WHILE loop 2");
+        */
+
+        /*
+                let number = 17;
+                do {
+                    if (number >= 10);
+                    break;
+                    console.log(number);
+                    number++;
+                } while (number < 10);
+                console.log("End of WHILE loop 3");
+        */
+
+        /*
+        for (let i = 1; i<=3; i++){
+            console.log(i);
+        }
+        console.log("End of FOR loop1");
+        */
+
+        // let i = 1; izvrši se samo jednom
+        // i <= 3 => true
+        // console.log(1)
+        // i++ => i=2
+        // i <= 3 => true
+        // console.log(2)
+        // i++ => i=3
+        // i <= 3 => true
+        // console.log(3)
+        // i++ => i=4
+        // i <= 3 => false
+
+
+        // for(let i = 1; i < 4; i++){
+        //     console.log("Start with i = " + i);
+        //     for(let j = 1; j < 4; j++){
+        //         console.log(i + " x " + j + " = " + (i*j));
+        //     }
+        //     console.log("End with i = " + i);
+        // }
+
+        //    Math.random()[0, 1) [,0 - 0,9999...]
+        //    Math.random() * 100 [0, 100) [o,o - 99,99...]
+        //    7,83 Math.floor(7,83) = 7;
+        //    Math.floor(10,035) = 10;
+        let number = Math.random(); // [0-1)
+        number *= 100; // [0-100)
+        number = Math.floor(number);
+
+        while (true) {
+            let guess = prompt("Your guess: ");
+            guess = parseInt(guess);
+            if (guess < number) {
+                console.log("The number is higher");
+            } else if (guess > number) {
+                console.log("The number is lower");
+            } else {
+                console.log("Congratulations!");
+                break;
+            }
+        }
+        console.log("Game over!");
+
+        // console.log(number);
 
     </script>
 
