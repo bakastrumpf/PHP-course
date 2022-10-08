@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 2</title>
+</head>
+
+<body>
+    <h1>Hi!</h1>
+    <button disabled>Dugme</button>
+
+    <script>
+        let p = 56;
+
+        // console.log(p + p + "p=");
+        // console.log(10 + "p=")
+        // console.log("p=" + p + p);
+        // console.log("p=5" + "5" + p)
+        // console.log("p=5" + "5" + "5")
+        // console.log(p + p + " = p = " + p + p);
+        // console.log(p + p + " = p = " + p * p);
+
+        let passed = p > 55;
+        let points = 67;
+
+        console.log("Passed1: " + passed++);
+        console.log("Passed2: " + passed);
+
+
+        console.log(passed);
+
+        /*
+        if(p > 5){
+            console.log("Passed!");
+        }else{
+            console.log("Failed!");
+        }
+        */
+
+        console.log("Passed3: " + --passed);
+        console.log("Passed4: " + passed);
+        console.log("Passed5: " + passed--);
+        console.log("Passed6: " + passed);
+
+        if (passed || points > 55) {
+            console.log("Student passed!");
+        } else {
+            console.log("Student failed!");
+        }
+
+        // true || biloSta = true
+        // false && biloSta = false
+
+        // points > 50 || points++ > 40 || /*passed++*/ > 0 
+        // false || true || (true/false) = true
+
+        points = 53;
+
+        /*
+        if(points > 55 || ++passed > 5){
+            console.log("Student passed!");
+        }else{
+            console.log("Student failed!");
+        }
+        */
+        if (points > 55 || ++passed > 5) {
+            console.log("Student passed!");
+        } else if (points > 50) {
+            console.log("Maybe");
+        } else {
+            console.log("Student failed!");
+        }
+
+        points = 7;
+        if (points == 5) {
+            console.log("Pet");
+        } else if (points == 6) {
+            console.log("Šest");
+        } else if (points == 7) {
+            console.log("Sedam");
+        }
+
+        if (points == 5){
+            console.log("Pet");
+        }else {
+            console.log("Inside...");
+            if (points == 6) {
+            console.log("Šest");
+        } else if (points == 7) {
+            console.log("Sedam");
+        }
+        }
+
+        //console.log("Passed: " + passed);
+
+    </script>
+
+</body>
+
+</html>
