@@ -40,6 +40,7 @@
         }
         */
 
+        /*
         console.log("Passed3: " + --passed);
         console.log("Passed4: " + passed);
         console.log("Passed5: " + passed--);
@@ -50,6 +51,7 @@
         } else {
             console.log("Student failed!");
         }
+        */
 
         // true || biloSta = true
         // false && biloSta = false
@@ -66,6 +68,9 @@
             console.log("Student failed!");
         }
         */
+        //console.log("Passed: " + passed); 
+
+        /*
         if (points > 55 || ++passed > 5) {
             console.log("Student passed!");
         } else if (points > 50) {
@@ -74,6 +79,9 @@
             console.log("Student failed!");
         }
 
+        */
+
+        /*
         points = 7;
         if (points == 5) {
             console.log("Pet");
@@ -83,18 +91,93 @@
             console.log("Sedam");
         }
 
-        if (points == 5){
+        if (points == 5) {
             console.log("Pet");
-        }else {
+        } else {
             console.log("Inside...");
             if (points == 6) {
-            console.log("Šest");
-        } else if (points == 7) {
-            console.log("Sedam");
-        }
+                console.log("Šest");
+            } else if (points == 7) {
+                console.log("Sedam");
+            }
         }
 
-        //console.log("Passed: " + passed);
+        */
+
+        //ternarni operator ?
+        let msg = "Poruka: " +
+            (points > 50 ? "Čestitam" : "Žao mi je");
+        /*
+        if (points > 50) {
+            msg = "Čestitam";
+        } else {
+            msg = "Žao mi je";
+        }
+        console.log(msg);
+        */
+
+        /*
+        msg = undefined;
+        points = 9;
+        switch (points + 1) {
+            case 5: msg = "Pet";
+                break;
+            case 6: msg = "Šest";
+                break;
+            case 7: msg = "Sedam";
+                break;
+            default: msg = "Nepoznato";
+                break;
+        }
+        console.log("Switch je: " + msg);
+
+        */
+
+        /*
+        switch (unos) {
+            case "1":
+            case "2":
+            case "3":
+            case "4": msg = "osnovne studije";
+                break;
+            case "M":
+            case "m": msg = "masterske studije";
+                break;
+            case "D":
+            case "d": msg = "doktorske studije";
+                break;
+            default: msg = "Nepravilan unos";
+                break;
+        }
+        */
+
+        
+        let number1 = 1;
+        while(number1 <= 3){
+            console.log("End of while loop");
+            number1++;
+        }
+        
+
+        // number = 1;
+        // if (number <= 3) = true;
+        // console.log(1);
+        // number ++ => number = 2;
+        // if (number <=3) => true;
+        // console.log(2);
+        // number ++ => number = 3;
+        // if (number <=3) => true;
+        // console.log(3);
+        // number++ => number = 4;
+        // if (number <=3 ) => false;
+
+        let number = 10;
+        while(number >= 0){
+            console.log(number);
+            number -= 2;
+        }
+        console.log("This while loop ends with");
+        console.log("Number = " + number)
 
     </script>
 
