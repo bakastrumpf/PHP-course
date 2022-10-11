@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript3 | basic functions</title>
+</head>
+
+<body>
+    <h1>Hello, JS!</h1>
+    <p>Today's lesson is about some basic functions and how to invoke them, as well as about arrays</p>
+    <script>
+        let i = 0;
+        for (i = 0; i <= 10; i++) {
+            // console.log("I = " + i);
+            // continue;
+            // console.log("I^2 = " + i*i);
+
+            if (i % 2 == 0) {
+                continue;
+            }
+            console.log(i + "^2 = " + i * i);
+        }
+
+        let number = 0;
+        number = Math.random() * 5;
+        // number = Math.random ()*(high - low) + low;
+        // number = Math.random ()*(5 - 0) + 0;
+        number = Math.floor(number);
+        let success = false;
+        while (!success) {
+            // let guess = prompt("Your guess?");
+            // guess = parseInt(guess);
+            let guess = number;
+            if (guess != number) {
+                continue;
+            }
+            success = true;
+        }
+        console.log("Game over!");
+
+        function printHello() {
+            console.log("Hello, world!");
+        }
+
+        printHello();
+        printHello();
+        printHello();
+
+        function printSum(a, b) {
+            let result = a + b;
+            console.log("a=" + a);
+            console.log("b=" + b);
+            console.log("Result = " + result);
+        }
+
+        printSum();
+        printSum(17, -5);
+        printSum(17, "b");
+
+        function min(c, d) {
+            result2 = c;
+            if (result2 > d) {
+                result2 = d;
+            }
+            return result2;
+        }
+
+        let minimum = min(10, 7);
+        console.log("Minimum dva broja je " + minimum);
+
+        function takeAGuess() {
+            let guess = prompt("Your guess:");
+            guess = parseInt(guess);
+            if (guess == number) {
+                alert("Congrats! You are right!");
+            } else {
+                alert("Try again!");
+            }
+        }
+
+        // let array = new Array(1, 2, 3, 4, 5);
+        let array = [51, 26, 73, 48, 95, 6];
+        console.log(array);
+        console.log(array[2]);
+
+        array[0]++;
+        console.log(array);
+
+        array[3] = 0;
+        // array[3] = "php";
+        // console.log(array);
+
+        let sum = 0;
+        for (i = 0; i < array.length; ++i) {
+            sum += array[i];
+        }
+        console.log(sum);
+
+        array[6] = 1;
+        console.log(array);
+
+        array[10] = 12;
+        console.log(array);
+
+        array.push(8);
+        array.push(7);
+        console.log(array);
+
+        function max(array) {
+            if (array.length == 0) {
+                return "ERROR";
+            }
+
+            let assumption = array[0];
+
+            for (i = 1; i < array.length; ++i) {
+                if (assumption < array[i]) {
+                    assumption = array[i];
+                }
+            }
+            return assumption;
+        }
+        console.log(max([]));
+        console.log(max([1, 3, 12, 7, 4]));
+
+        console.log(array.join(" | "));
+        console.log(array.slice(2, 6));
+        console.log(array.reverse());
+        let newArray = [array[2], array[5], array[7]];
+        console.log(newArray);
+        
+        function compare(e, f){
+            // return e - f;
+            if (e<f){
+                return 1;
+            }else if(e>f){
+                return -1;
+            }else {
+                return 0;
+            }
+        }
+        console.log(array.sort(compare));
+
+    </script>
+
+    <button onClick="printHello()">
+        Say hello!
+    </button>
+
+    <button onClick="takeAGuess()">
+        Take a guess!
+    </button>
+
+</body>
+
+</html>
