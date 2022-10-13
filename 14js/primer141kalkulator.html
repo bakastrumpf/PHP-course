@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript4 | Kalkulator</title>
+
+    <script language="JavaScript">
+        function sabiranje(){
+            // čitanje podataka iz forme
+            // funkcija parseInt(String) => integer
+            let prviBroj = parseInt(document.digitron.prvi.value);
+            let drugiBroj = parseInt(document.digitron.drugi.value);
+            // if (prviBroj == " ") prviBroj=0;
+            // if (drugiBroj == " ") drugiBroj=0;
+            let rezultat = prviBroj + drugiBroj;
+            // upis podataka u polje u formi
+            document.digitron.rezultat.value = rezultat;
+            if (isNaN(rezultat)){
+                document.digitron.rezultat.value = "Greška";
+                alert("Pogrešili ste!"); // ispisaće ALERT pre rezultata jer ALERT ima prednost
+                console.log("Ušao u IF");
+            }else {
+                document.digitron.rezultat.value = rezultat;
+                console.log("Ušao u ELSE");
+            }
+            // rezultat je NaN = Not a Number kada polje nema broj (tekst ili prazno polje)
+            // return rezultat;
+        };
+    </script>
+</head>
+
+<body>
+    <h1>Kalkulator u JS</h1>
+    <form name="digitron" action="" method="">
+        Unesite prvi broj:
+        <input type="text" name="prvi" size="5"/>
+        <br>
+        Unesite drugi broj:
+        <input type="text" name="drugi" size="5"/>
+        <br>
+        <input type="button" name="zbir" value="+" onClick="sabiranje()" />
+        <input type="button" name="razlika" value="-" onClick="oduzimanje()" />
+        <br>
+        Rezultat:
+        <input type="text" name="rezultat" />
+    </form>
+
+</body>
+
+</html>
