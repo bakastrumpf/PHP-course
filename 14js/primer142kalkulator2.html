@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Prekvalifikacije, ETF, JavaScript" />
+    <meta name="author" content="DD | MS" />
+    <meta name="description" content="Basics of JavaScript functions | JavaScript calculators" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript4 | Kalkulator v2.0</title>
 
@@ -23,17 +26,17 @@
                     case 3: rez = a * b;
                         break;
                     case 4: if (b == 0)
-                        rez = "Zabranjeno deljenje nulom!";
-                    else
-                        rez = a / b;
+                                rez = "Zabranjeno deljenje nulom!";
+                            else
+                                rez = a / b;
                         break;
                     case 5: rez = a % b;
                         break;
-                    case 6: rez = a * a; //ignoriše se jer smo zahtevali da se u nesu OBA broja
+                    case 6: rez = a * a; //ignoriše se jer smo zahtevali da se unesu OBA broja
                         break;
-                    case 7: rez = Math.pow(b, b); //ignoriše se jer smo zahtevali da se u nesu OBA broja
+                    case 7: rez = Math.pow(b, b); //ignoriše se jer smo zahtevali da se unesu OBA broja
                         break;
-                    case 8: rez = Math.pow(a, b); //ignoriše se jer smo zahtevali da se u nesu OBA broja
+                    case 8: rez = Math.pow(a, b); //ignoriše se jer smo zahtevali da se unesu OBA broja
                         break;
                     case 9: rez = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
                         break;
@@ -55,9 +58,11 @@
     <form name="digitron" action="" method="">
         Unesite prvi broj:
         <input type="text" name="prvi" size="5" value="0" />
+        <!--podešavamo početnu vrednost na 0 da bi svi dugmići radili za kompleksne operacije i kvadrate-->
         <br>
         Unesite drugi broj:
         <input type="text" name="drugi" size="5" value="0" />
+        <!--podešavamo početnu vrednost na 0 da bi svi dugmići radili za kompleksne operacije i kvadrate-->
         <br>
         <input type="button" name="zbir" value="+" onClick="izracunaj(1)" />
         <input type="button" name="razlika" value="-" onClick="izracunaj(2)" />
@@ -81,5 +86,4 @@
     </form>
 
 </body>
-
 </html>
