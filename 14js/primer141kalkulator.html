@@ -29,6 +29,24 @@
             // rezultat je NaN = Not a Number kada polje nema broj (tekst ili prazno polje)
             // return rezultat;
         };
+
+        function oduzimanje(){
+            let prviBroj = parseInt(document.digitron.prvi.value);
+            let drugiBroj = parseInt(document.digitron.drugi.value);
+            // if (prviBroj == " ") prviBroj=0;
+            // if (drugiBroj == " ") drugiBroj=0;
+            let rezultat = prviBroj - drugiBroj;
+            // upis podataka u polje u formi
+            document.digitron.rezultat.value = rezultat;
+            if (isNaN(rezultat)){
+                document.digitron.rezultat.value = "Greška";
+                alert("Pogrešili ste!"); // ispisaće ALERT pre rezultata jer ALERT ima prednost
+                console.log("Ušao u IF");
+            }else {
+                document.digitron.rezultat.value = rezultat;
+                console.log("Ušao u ELSE");
+            }
+        }
     </script>
 </head>
 

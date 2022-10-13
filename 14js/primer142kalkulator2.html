@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript4 | Kalkulator v2.0</title>
+
+    <script language="JavaScript">
+        function izracunaj(operacija) {
+            var a = parseInt(document.digitron.prvi.value);
+            var b = parseInt(document.digitron.drugi.value);
+            var rez = 0;
+
+            if ((isNaN(a) == false) && (isNaN(b) == false)) {
+                //sprovodimo operaciju + ili - ili nešto treće
+                switch (operacija) {
+                    case 1: rez = a + b;
+                        break;
+                    case 2: rez = a - b;
+                        break;
+                    case 3: rez = a * b;
+                        break;
+                    case 4: if (b == 0)
+                        rez = "Zabranjeno deljenje nulom!";
+                    else
+                        rez = a / b;
+                        break;
+                    case 5: rez = a % b;
+                        break;
+                    case 6: rez = a * a; //ignoriše se jer smo zahtevali da se u nesu OBA broja
+                        break;
+                    case 7: rez = Math.pow(b, b); //ignoriše se jer smo zahtevali da se u nesu OBA broja
+                        break;
+                    case 8: rez = Math.pow(a, b); //ignoriše se jer smo zahtevali da se u nesu OBA broja
+                        break;
+                    case 9: rez = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+                        break;
+                    default: rez = "Nepostojeća operacija";
+                }
+                document.digitron.rezultat.value = rez;
+            } else {
+                // document.FormName.FieldName.AttributeName
+                // dokument.ImeForme.ImePolja.ImeAtributa
+                document.digitron.rezultat.value = "Digitron radi samo sa celim brojevima!";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Kalkulator u JS</h1>
+    <form name="digitron" action="" method="">
+        Unesite prvi broj:
+        <input type="text" name="prvi" size="5" value="0" />
+        <br>
+        Unesite drugi broj:
+        <input type="text" name="drugi" size="5" value="0" />
+        <br>
+        <input type="button" name="zbir" value="+" onClick="izracunaj(1)" />
+        <input type="button" name="razlika" value="-" onClick="izracunaj(2)" />
+        <input type="button" name="proizvod" value="*" onClick="izracunaj(3)" />
+        <input type="button" name="deljenje" value="/" onClick="izracunaj(4)" />
+        <input type="button" name="ostatak" value="%" onClick="izracunaj(5)" />
+        <br>
+        Kompleksno stepenovanje:
+        <br>
+        <input type="button" name="kvadrat" value="a^2" onClick="izracunaj(6)" />
+        <input type="button" name="kvadrat2" value="b^b" onClick="izracunaj(7)" />
+        <input type="button" name="stepen" value="a^b" onClick="izracunaj(8)" />
+        <br>
+        Korenovanje:
+        <br>
+        <input type="button" name="kvKoren" value="koren(a^2+b^2)" onClick="izracunaj(9)" />
+        <br>
+        <br>
+        Rezultat:
+        <input type="text" name="rezultat" />
+    </form>
+
+</body>
+
+</html>
