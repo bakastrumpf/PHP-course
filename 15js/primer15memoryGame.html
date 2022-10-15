@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Prekvalifikacije, ETF, JavaScript" />
+    <meta name="author" content="KŽ | MS" />
+    <meta name="description" content="Basics of JavaScript | Memory game | String & Date objects" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP#15 | Memory game</title>
+</head>
+
+<body>
+    <div id="game">   </div>
+    <button onclick="newGame()">Nova igra</button>
+    <br>
+    
+    <span>
+        Vreme:
+    </span>
+    <b id="time">00.00 </b>
+
+    <script>
+        let time = 0;
+
+        function newGame() {
+            //    alert("R u ready?")
+            let divGame = document.getElementById("game");
+            divGame.innerHTML = "";
+            for (let i = 0; i < 16; i++) {
+                //   for (let i = 1; i <= 16; i++){
+                    if (i%4==0 && i!=0){
+                    let newLine = document.createElement("br");
+                    divGame.appendChild(newLine);
+                    // 0 1 2 3 4 ... 15
+                }
+                let img = document.createElement("img"); // </img>
+                img.src = "slike/upitnik.jpg" // <img src="..." />
+
+                divGame.appendChild(img);
+            }
+        }
+        //setTimeout(function(){
+        setInterval(function () {
+            // alert("Your time is ticking");
+            time++;
+            // time = 67s;
+            let seconds = time % 60;
+            let minutes = Math.floor(time / 60);
+
+            /*
+            if (seconds < 10){..."0"}
+            else {...""}
+            */
+
+            /*
+            let text = "";
+            if(minutes<10){
+                text += "0";
+            }
+            text += minutes;
+            text += ".";
+            if(seconds<10){
+                text += "0";
+            }
+            text += seconds;
+            */
+
+            document.getElementById("time").innerHTML =
+                (minutes < 10 ? "0" : "") + minutes + "." +
+                (seconds < 10 ? "0" : "") + seconds;
+            // + text;
+        }, 1000);
+    </script>
+    <style>
+        img{
+            width: 80px;
+            height: 80px;
+            margin: 5px;
+        }
+    </style>
+</body>
+
+</html>
