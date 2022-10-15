@@ -12,10 +12,10 @@
 </head>
 
 <body>
-    <div id="game">   </div>
+    <div id="game"> </div>
     <button onclick="newGame()">Nova igra</button>
     <br>
-    
+
     <span>
         Vreme:
     </span>
@@ -23,6 +23,78 @@
 
     <script>
         let time = 0;
+        const vockice = [
+            "avokado",
+            "banana",
+            "grozdje",
+            "jabuka",
+            "kruska",
+            "lubenica",
+            "papaja",
+            "pomorandza",
+        ];
+
+        let images = [];
+
+        let open = -1;
+
+        let enabled = true;
+
+        function shuffle(arr) {
+            for (let i = 0; i < 50; i++) {
+                let first = Math.floor(Math.random() * 16);
+                let second = Math.floor(Math.random() * 16);
+                //NE RADI!
+                // first = 7, second = 11
+                //arr[first] = arr[second];
+                // arr[7] = "jabuka"
+                //arr[second] = arr[first];
+                // arr[second] = arr[first]; 
+                // arr[11] = arr[7]
+                // arr[11] = "jabuka"; 
+
+                //RADI!
+                // first = 7, second = 11
+                let p = arr[first];
+                // p = arr[7]
+                // p = "pomorandža"
+                arr[first] = arr[second];
+                // arr[7] = arr[11]
+                // arr[7] = "jabuka"
+                arr[second] = p;
+                // arr[11] = "pomorandža"
+            }
+        }
+
+        function play(index) {
+            if (!enabled){
+                return;
+            }
+            console.log(index);
+            let elements = document.getElementsByClassName("kartica");
+            let elem = elements[index];
+            elem.src = "slike/" + images[index] + ".png";
+            enabled = false;
+
+            if (open == -1) {
+                open = index;
+                enabled = true;
+            } else {
+                if (images[open] == images[index]) {
+                    // success
+                    open = -1;
+                    // enabled = true;
+                } else {
+                    // fail
+                    setTimeout(function () {
+                        elem.src = "slike/upitnik.jpg";
+                        elements[open].src = "slike/upitnik.jpg";
+                        open = -1;
+                        enabled = true;
+                    }, 1000);
+                }
+            }
+        }
 
         function newGame() {
             //    alert("R u ready?")
@@ -30,17 +102,25 @@
             divGame.innerHTML = "";
             for (let i = 0; i < 16; i++) {
                 //   for (let i = 1; i <= 16; i++){
-                    if (i%4==0 && i!=0){
+                if (i % 4 == 0 && i != 0) {
                     let newLine = document.createElement("br");
                     divGame.appendChild(newLine);
                     // 0 1 2 3 4 ... 15
                 }
                 let img = document.createElement("img"); // </img>
                 img.src = "slike/upitnik.jpg" // <img src="..." />
-
+                // img.src = "slike/" + vockice[i%8] + ".png";
+                images[i] = vockice[i % 8];
+                img.className = "kartica";
+                img.onclick = function () {
+                    play(i);
+                    // alert("Slika " + i);
+                };
                 divGame.appendChild(img);
             }
+            shuffle(images);
         }
+
         //setTimeout(function(){
         setInterval(function () {
             // alert("Your time is ticking");
@@ -74,7 +154,7 @@
         }, 1000);
     </script>
     <style>
-        img{
+        img {
             width: 80px;
             height: 80px;
             margin: 5px;
