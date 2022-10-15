@@ -81,9 +81,9 @@
                 enabled = true;
             } else {
                 if (images[open] == images[index]) {
-                    // success
+                    // success - kad dođe do 8, izbaciti poruku da je igra završena - ideja za vežbu 
                     open = -1;
-                    // enabled = true;
+                    enabled = true;
                     console.log(open);
                 } else {
                     // fail
@@ -112,6 +112,7 @@
                 img.src = "slike/upitnik.jpg" // <img src="..." />
                 // img.src = "slike/" + vockice[i%8] + ".png";
                 images[i] = vockice[i % 8];
+                // console.log(images);
                 img.className = "kartica";
                 img.onclick = function () {
                     play(i);
@@ -119,7 +120,9 @@
                 };
                 divGame.appendChild(img);
             }
+            // console.log(images);
             shuffle(images);
+            // console.log(images);
         }
 
         //setTimeout(function(){
