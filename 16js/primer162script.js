@@ -1,11 +1,7 @@
 console.log("Hello, world!");
-
 let message = "This is my first message!";
-
 console.log(message);
-
 let longerMessage = message + "This is a longer, second message!";
-
 console.log(longerMessage);
 
 let i = 0;
@@ -15,17 +11,12 @@ for (i=0; i < longerMessage.length; ++i){
 
 console.log(longerMessage.toLowerCase());
 console.log(longerMessage.toUpperCase());
-
 // "This is"
-
 console.log(longerMessage.indexOf("Message"));
 console.log(longerMessage.indexOf("first message"));
-
 console.log(longerMessage.lastIndexOf("first message"));
-
 console.log(longerMessage.slice(5, 10));
 console.log(longerMessage.substring(5, 10));
-
 console.log(eval(" 2*3+5"));
 
 let now = new Date(2022, 10, 25, 12, 32, 33);
