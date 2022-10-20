@@ -5,7 +5,7 @@ let longerMessage = message + "This is a longer, second message!";
 console.log(longerMessage);
 
 let i = 0;
-for (i=0; i < longerMessage.length; ++i){
+for (i = 0; i < longerMessage.length; ++i) {
     console.log(longerMessage[i]);
 }
 
@@ -32,9 +32,9 @@ console.log(now.getUTCHours());
 console.log(now.getTime());
 console.log(now.getMilliseconds());
 
-let date = new Date (2022, 9, 18, 17, 45, 0);
+let date = new Date(2022, 9, 18, 17, 45, 0);
 console.log(date);
 
-if (date < now){
+if (date < now) {
     console.log("OK");
 }
