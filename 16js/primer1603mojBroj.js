@@ -18,7 +18,7 @@ function tick() {
     let difference = currentTime.getTime() - startTime.getTime();
 
     let date = new Date(difference);
-    console.log(date);
+    // console.log(date);
 
     let minutes = date.getMinutes();
     let seconds = date.getSeconds();
@@ -30,6 +30,7 @@ function tick() {
     let timer = minutes + "." + seconds + ":" + milliseconds;
 
     document.getElementById("timer").innerHTML = timer;
+
 }
 
 let set0 = [10, 15, 20];
@@ -45,6 +46,7 @@ let index0 = 0;
 let index1 = 0;
 
 let result = "";
+let userResult = 0;
 
 function generate() {
     goal = Math.random()*1000;
@@ -107,4 +109,19 @@ function detect(num){
 function calculate(){
     result = document.getElementById('result').innerHTML;
     console.log(result);
+    // console.log(eval('1+2'));
+    userResult = eval(result);
+    console.log("Result is: " + userResult);
+
+    if(userResult == goal){
+        console.log('Correct!');
+        document.getElementById('info').innerHTML = 
+            'Correct! Time: ' + document.getElementById('timer').innerHTML;
+    }else{
+        console.log('Not correct!');
+        document.getElementById('info').innerHTML = 
+            'Not correct!';
+    }
+
+    clearInterval(tickId);
 }
