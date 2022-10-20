@@ -44,6 +44,8 @@ let digit4 = 0;
 let index0 = 0;
 let index1 = 0;
 
+let result = "";
+
 function generate() {
     goal = Math.random()*1000;
     goal = Math.floor(goal);
@@ -94,4 +96,15 @@ function start() {
         tickId = setInterval(tick, 100);
         state = 1;
     }
+}
+
+function detect(num){
+    console.log('Detected: ' + document.getElementById(num).innerHTML);
+    result = document.getElementById('result').innerHTML;
+    document.getElementById('result').innerHTML = result + document.getElementById(num).innerHTML;
+}
+
+function calculate(){
+    result = document.getElementById('result').innerHTML;
+    console.log(result);
 }
