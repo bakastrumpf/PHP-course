@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Prekvalifikacije, ETF, PHP, html5, bootstrap, JS, regex" />
+    <meta name="author" content="TŠ | MS" />
+    <meta name="description" content="PHP: JS basics" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP#18</title>
+</head>
+<body>
+    <form name="registracija">
+        <h1>Registracija</h1>
+        Korisničko ime:
+        <input type="text" id="korisnicko_ime" name="korisnicko_ime">
+        <br>
+        Imejl adresa:
+        <input type="text" id="mejl" name="mejl">
+        <br>
+        Telefon:
+        <input type="phone" id="telefon" name="telefon">
+        <br>
+        Lozinka:
+        <input type="password" id="lozinka" name="lozinka">
+        <br>
+        Ponovljena lozinka:
+        <input type="password" id="ponovljena_lozinka" name="ponovljena_lozinka">
+        <br>
+        <button onclick="proveriPodatke()" type="button" name="registracija" value="Registruj se">
+            Registruj se
+        </button>
+    </form>
+
+    <div id="poruka"></div>
+
+    <script src="primer1802registracija.js"></script>
+    
+</body>
+</html>
