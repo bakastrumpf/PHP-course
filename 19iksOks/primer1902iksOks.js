@@ -2,15 +2,15 @@
 
 let boxes = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 let turn = 0;
-
-let gameOver = false;
+// let gameOver = false;
 
 function boxClicked(box) {
-    // console.log(box);
 
-    if(gameOver) {
-        return;
-    }
+
+    // console.log(box);
+  //  if(gameOver) {
+  //      return;
+  //  }
 
     if(boxes[box] != 0 ) {
         alert("Kliknite na slobodno polje!");
@@ -52,7 +52,6 @@ function boxClicked(box) {
             document.getElementById("box0").style.backgroundColor = "green";
             document.getElementById("box1").style.backgroundColor = "green";
             document.getElementById("box2").style.backgroundColor = "green";
-
         }
         let message = "Igra je završena! " + (turn == 1 ? "Pobednik je IKS!" : "Pobednik je OKS!");
         setTimeout(() => alert(message), 100);
