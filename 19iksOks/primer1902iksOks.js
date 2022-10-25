@@ -3,11 +3,17 @@
 let boxes = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 let turn = 0;
 
+let gameOver = false;
+
 function boxClicked(box) {
     // console.log(box);
 
-    if (boxes[box] != 0) {
-        alert("Click on a free cell!");
+    if(gameOver) {
+        return;
+    }
+
+    if(boxes[box] != 0 ) {
+        alert("Kliknite na slobodno polje!");
         return;
     }
 
@@ -48,7 +54,7 @@ function boxClicked(box) {
             document.getElementById("box2").style.backgroundColor = "green";
 
         }
-        let message = "Game over! " + (turn == 1 ? "Pobednik je IKS!" : "Pobednik je OKS!");
+        let message = "Igra je završena! " + (turn == 1 ? "Pobednik je IKS!" : "Pobednik je OKS!");
         setTimeout(() => alert(message), 100);
     }
 }
