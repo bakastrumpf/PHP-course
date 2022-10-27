@@ -141,15 +141,15 @@ function proveriKombinaciju() {
     // iscrtati crvene i žute tačke za rezultat
     for (let i = 0; i < br_elem_u_kombinaciji; i++) {
         let rezDugme = document.createElement("button");
-        let btnClass = "indicator";
+        let klasaDugmeta = "indicator";
         if (crveni > 0) {
-            btnClass += " crveni";
+            klasaDugmeta += " crveni";
             crveni--;
         } else if (zuti > 0) {
-            btnClass += " zuti";
+            klasaDugmeta += " zuti";
             zuti--;
         }
-        rezDugme.setAttribute("class", btnClass);
+        rezDugme.setAttribute("class", klasaDugmeta);
         pokusaj2Div.appendChild(rezDugme);
     }
     let noviRed = document.createElement("br");
