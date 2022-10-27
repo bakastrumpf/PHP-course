@@ -2,7 +2,8 @@
 
 let boxes = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 let turn = 0;
-// let gameOver = false;  --> ako ovo koristimo, u kombinciji s linijama 10-12, kod ne radi
+// let gameOver = false;  
+// --> ako ovo koristimo, u kombinciji s linijama 13-15, kod ne radi
 // tj. klik na polje ne radi ništa i prijavljuje grešku upravo s promenljivom gameOver
 // koja se koristi pre nego što je definisana
 

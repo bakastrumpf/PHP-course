@@ -1,12 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Tabela</title>
 </head>
-<body>
-    <table>
 
+<style type="text/css">
+    td, th {
+        text-align: center;
+    }
+
+    #sarena tr:nth-child(even) {
+            background: #609bf4;
+        }
+    #sarena tr:nth-child(odd) {
+            background: #ffbb28;
+        }
+
+</style>
+
+<body>
+    <table border="2">
+        <caption>Jednostavna tabela 4x5 </caption>
+        <tr>
+            <th>polje 1</th>
+            <th>polje 2</th>
+            <th>polje 3</th>
+            <th>polje 4</th>
+            <th>polje 5</th>
+        </tr>
+        <tr>
+            <td>polje 6</td>
+            <td>polje 7</td>
+            <td>polje 8</td>
+            <td>polje 9</td>
+            <td>polje 10</td>
+        </tr>
+        <tr>
+            <td>polje 11</td>
+            <td>polje 12</td>
+            <td>polje 13</td>
+            <td>polje 14</td>
+            <td>polje 15</td>
+        </tr>
+        <tr>
+            <td>polje 16</td>
+            <td>polje 17</td>
+            <td>polje 18</td>
+            <td>polje 19</td>
+            <td>polje 20</td>
+        </tr>
+    </table>
+    <hr>
+    <table border="1" cellspacing="3" cellpadding="3" align="center">
+        <caption>Centrirana tabela sa spojenim kolonama</caption>
+        <tr>
+            <th>Prva kolona </th>
+            <th>Druga kolona</th>
+            <th>Treća kolona</th>
+            <th>Četvrta kolona</th>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td colspan="2">12</td>
+            <td>13</td>
+            <!--
+             <td>14</td>    
+            -->
+        </tr>
+        <tr>
+            <td>21</td>
+            <td colspan="3">22</td>
+            <!--
+            <td>23</td>
+            <td>24</td>
+            -->
+        </tr>
+        <tr>
+            <td colspan="2">31</td>
+            <!--
+            <td>32</td>
+            -->
+            <td>33</td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td colspan="4">41</td>
+            <!--
+            <td>42</td>
+            <td>43</td>
+            <td>44</td>
+            -->
+        </tr>
+    </table>
+
+    <hr>
+
+    <table style="background-color: yellow;" cellspacing="3px" cellpadding="5px">
+        <caption>Tabela sa spojenim redovima bez okvira</caption>
+        <tr>
+            <th>Prva kolona </th>
+            <th>Druga kolona</th>
+            <th>Treća kolona</th>
+            <th>Kontrolna kolona</th>
+        </tr>
+        <tr>
+            <td rowspan="2">21</td>
+            <td>22</td>
+            <td rowspan="5">23</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <!--
+            <td>31</td>
+            -->
+            <td>32</td>
+            <!--
+            <td>33</td>
+            -->
+            <td>34</td>
+        </tr>
+        <tr>
+            <td>41</td>
+            <td rowspan="3">42</td>
+            <!--
+            <td>43</td>
+            -->
+            <td>44</td>
+        </tr>
+        <tr>
+            <td>51</td>
+            <!--
+            <td>52</td>
+            -->
+            <!--   
+            <td>53</td>
+            -->
+
+            <td>54</td>
+        </tr>
+        <tr>
+            <td>61</td>
+            <!--   
+            <td>62</td>
+            -->
+            <!--   
+            <td>63</td>
+            -->
+            <td>64</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table border="3" cellpadding="5px" cellspacing="5px" id="sarena">
+        <caption>Kompleksna tabela</caption>
+        <tr>
+            <th colspan="7">NASLOV TABELE</th>
+        </tr>
+        <tr>
+            <th rowspan="6">aaa</th>
+            <th rowspan="2">bbb</th>
+            <th>ccc</th>
+            <th>ddd</th>
+            <th>eee</th>
+            <th>fff</th>
+            <th>ggg</th>
+        </tr>
+        <tr>
+            <!--
+                <td>345</td>
+            -->
+            <!--
+            <td>3456</td>
+            -->
+            <td>98</td>
+            <td>096</td>
+            <td>53456</td>
+            <td>598</td>
+            <td>5096</td>
+        </tr>
+        <tr>
+            <!--
+                <td>745</td>
+            -->
+            <td>73456</td>
+            <td>798</td>
+            <td>7096</td>
+            <td rowspan="3" colspan="2">773456</td>
+            <!--
+                <td>7798</td>
+            -->
+            <td>77096</td>
+        </tr>
+        <tr>
+            <!--
+            <td>8345</td>
+            -->
+            <td rowspan="2">83456</td>
+            <td>898</td>
+            <td>8096</td>
+            <!--
+                <td>883456</td>
+            -->
+            <!--
+                <td>8898</td>
+            -->
+            <td>88096</td>
+        </tr>
+        <tr>
+            <!--
+                <td>28345</td>
+            -->      
+            <!--
+                <td>283456</td>
+            -->     
+            <td>2898</td>
+            <td>28096</td>
+            <!--
+                <td>2883456</td>
+            -->
+            <!--
+                <td>28898</td>
+            -->
+            <td>288096</td>
+        </tr>
+        <tr>
+            <!--
+            <td>08345</td>
+            -->
+            <td>083456</td>
+            <td>0898</td>
+            <td>08096</td>
+            <td>0883456</td>
+            <td>08898</td>
+            <td>088096</td>
+        </tr>
     </table>
 </body>
+
 </html>
+
+<!--   
+-->
+
+            <!--   
+            -->
