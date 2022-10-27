@@ -2,3 +2,20 @@ img {
     width: 100px;
     height: 100px;
 }
+
+.indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0px;
+    margin: 25px 5px;
+    vertical-align: top;
+}
+
+.crveni {
+    background-color: red;
+}
+
+.zuti {
+    background-color: yellow;
+}
