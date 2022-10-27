@@ -135,8 +135,7 @@ function proveriKombinaciju() {
         if (kombinacija[i] == pokusaj[i])
             crveni++;
     }
-    console.log(crveni);
-
+    // console.log(crveni);
     let pokusaj2Div = document.getElementById("pokusaji");
     // 2 crvena, 1 zuto
     // iscrtati crvene i žute tačke za rezultat
@@ -150,10 +149,9 @@ function proveriKombinaciju() {
             btnClass += " zuti";
             zuti--;
         }
-        rezDugme.setAttribute("class", rezDugme);
+        rezDugme.setAttribute("class", btnClass);
         pokusaj2Div.appendChild(rezDugme);
     }
     let noviRed = document.createElement("br");
     pokusaj2Div.appendChild(noviRed);
 }
-
