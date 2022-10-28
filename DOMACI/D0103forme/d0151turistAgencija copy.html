@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Prekvalifikacije, ETF, PHP, html5, css" />
+    <meta name="author" content="Marija Savić" />
+    <meta name="description" content="PHP: osnove HTMLa | forme | zadatak5" />
+    <title>Forme: 2. Turistička agencija</title>
+    <style type="text/css">
+        #zaglavlje {
+            background-color: #8c8c8c;
+            padding: 10px;
+            margin: 10px;
+            height: 40px;
+            font-style: italic;
+        }
+
+        #podnozje {
+            background-color: #8c8c8c;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            height: 50px;
+            font-style: italic;
+        }
+
+        #forma {
+            background-color: #f2f2f2;
+        }
+
+        #ponuda {
+            background-color: #d9d9d9;
+            font-style: italic;
+        }
+
+        #glavniDiv {
+            width: 60%;
+            align-self: center;
+            position: sticky;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="glavniDiv">
+        <table>
+            <tr>
+                <th id="zaglavlje" colspan="3">Turistička agencija</th>
+            </tr>
+            <tr>
+                <td><img src="images/sun.png"></td>
+                <td>
+                    Dobrodošli na sajt naše turističke agencije. Za dodatne informacije javite nam se na telefon
+                    011/1234567.
+                </td>
+                <td><img src="images/sun.png"></td>
+            </tr>
+            <tr>
+                <td id="ponuda">
+                    <h3>Ponuda:</h3>
+                    <ol>
+                        <li>Letovanja
+                            <ul>
+                                <li>Španija
+                                </li>
+                                <li>Turska
+                                </li>
+                                <li>Grčka
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Zimovanja
+                            <ul>
+                                <li>Italija</li>
+                                <li>Švajcarska</li>
+                            </ul>
+                        </li>
+                        <li>Izleti
+                            <ol>
+                                <li>Prag</li>
+                                <li>Beč</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </td>
+                <td id="forma">
+                    <h3>Rezervacije</h3>
+                    <form name="forma" method="get" action="posalji.html">
+                        <b>Ime i prezime: </b>
+                        <input type="name" placeholder="ime i prezime" required>
+                        <br>
+                        <b>Imejl adresa:</b>
+                        <input type="email" name="email" placeholder="imejl adresa" size="10" maxlength="18" required>
+                        <br>
+                        <b>Broj osoba: </b>
+                        <select name="persons">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                        <table>
+                            <tr>
+                                <td>Osobine:</td>
+                                <td>
+                                    <input type="checkbox" name="features" value="klima" /> Klima
+                                    <br>
+                                    <input type="checkbox" name="features" value="TV" /> TV
+                                    <br>
+                                    <input type="checkbox" name="features" value="terasa" /> Terasa
+                                    <br>
+                                    <input type="checkbox" name="features" value="minibar" /> Mini bar
+                                </td>
+                            </tr>
+                        </table>
+                        <input name="dugme2" type="reset" value="ODUSTANI" />
+                        <input name="dugme1" type="submit" value="POTVRDI" />
+                    </form>
+                </td>
+                <td id="ponuda"> </td>
+            </tr>
+            <tr id="podnozje">
+                <td colspan="3">Sva prava zadržana.</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
