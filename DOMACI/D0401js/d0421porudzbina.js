@@ -41,9 +41,9 @@ function proveriPorciju(){
 function proveriPodatke(){
     var poruka = "";
     if (!proveriIme())
-        poruka += "Nedostaje ime. ";
+        poruka += "Nedostaje ime, ili ste uneli nedozvoljene znakove. ";
         if (!proveriPrezime())
-        poruka += "Nedostaje prezime. ";
+        poruka += "Nedostaje prezime, ili ste uneli nedozvoljene znakove. ";
     if (!proveriAdresu())
         poruka += "Nedostaje adresa. ";
     if (!proveriPostBroj())
