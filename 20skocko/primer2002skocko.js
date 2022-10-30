@@ -34,6 +34,8 @@ let pokusaj = [];
 let br_pokusaja = 0;
 let pokusajPoz = 0;
 let vremePocetka;
+let intervalTmp = 0;
+let intervalId;
 
 
 function init() {
@@ -48,6 +50,8 @@ function init() {
         simboliDiv.appendChild(simbolImg);
     }
 
+    
+
     // "key" - "value"
     // localStorage.setItem("pobeda", 0);
     // localStorage.setItem("pobeda", 1);
@@ -59,7 +63,19 @@ function init() {
     // simboli[1] = 'nesto';
     // console.log(simboli);
     // let nekaVrednost = localStorage.getItem("nekiKljuc"); // vraća NULL ako nemamo taj ključ
+}
 
+function intervalFunction(){
+    console.log(intervalTmp);
+    intervalTmp++;
+    if (intervalTmp == 30){
+        console.log("interval end");
+        clearInterval();
+        ukloniAtributNaKlik();
+        sacuvajStatistikuPartije(false);
+        // TODO: ispisivanje tražene kombinacije
+
+    }
 }
 
 function newGame() {
@@ -93,6 +109,7 @@ function newGame() {
     // generisanje nasumičnih kombinacija koje pogađamo
     generateNewCombo();
     vremePocetka = Date.now(); // trenutak početka partije
+    intervalId = setInterval(intervalFunction, 1000);
 }
 
 function generateNewCombo() {
@@ -183,10 +200,11 @@ function sacuvajStatistikuPartije(pobeda) {
     // 2. mogućnost
 
     let sacuvanaIgra = localStorage.getItem("igre");
-    // igre --> pokusaj#time0;pokusaj#time1;pokusaj#time2;
+    // igre --> pokusaj#time0#ishod;pokusaj#time1#ishod;pokusaj#time2;
     // čitanje => times.split(';') -> pokusaj#time0, pokusaj#time1, pokusaj#time2 => split...
     if(sacuvanaIgra == null){
         vremePocetka = "" + br_pokusaja + "#" + protekloVreme;
+        // + "#" + pobeda;
     } else {
         sacuvanaIgra += ";" + br_pokusaja + "#" + protekloVreme;
     }
@@ -276,4 +294,8 @@ function ukloniAtributNaKlik(){
     for (i = 0; i < simboliImgs.length; i++){
         simboliImgs[i].removeAttribute("onclick");
     }
+}
+
+function istorija(){
+    window.open("primer2104istorija.html")
 }
