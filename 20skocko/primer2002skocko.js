@@ -68,6 +68,9 @@ function generateNewCombo() {
         // Math.random() => vraća nasumičan realan broj iz intervala [0,1)
         // 6*Math.random()-> [0,6)
         // Math.floor(6*Math.random()) --> neki ceo broj od brojeva 0, 1, 2 , 3, 4, 5
+        // Math.floor (5.05) --> 5
+        // Math.floor (5.95) --> 5
+        // Math.floor (-5.05) --> -6
         kombinacija[i] = simboli[Math.floor(simboli.length * Math.random())];
     }
     console.log(kombinacija);
@@ -131,10 +134,36 @@ function proveriKombinaciju() {
     // console.log(pokusaj);
     let crveni = 0;
     let zuti = 0;
+    let netacniNiz = [];
+
     for (let i = 0; i < br_elem_u_kombinaciji; i++) {
-        if (kombinacija[i] == pokusaj[i])
+        // kombincija: skočko, srce, karo, karo 
+        // pokušaj: pik, srce --> '', skočko, tref
+        // problem: 
+        if (kombinacija[i] == pokusaj[i]){
             crveni++;
+            pokusaj[i]= '';
+        }else{
+            // skočko, karo, srce
+            // 
+            netacniNiz.push(kombinacija[i]);
+        }
     }
+
+    // pokušaj: pik, '', skočko, tref
+    // netačno: skočko, karo, srce
+    // -----------
+    // pokušaj: skočko, '', zvezda, tref
+    // netačno: skočko, skočko, srce
+    for(let elem of netacniNiz){
+        let ind = pokusaj.indexOf(elem);
+        if(ind != -1){
+            // skočko, srce
+            zuti++;
+            pokusaj[ind] = '';
+        }
+    }    
+
     // console.log(crveni);
     let pokusaj2Div = document.getElementById("pokusaji");
     // 2 crvena, 1 zuto
