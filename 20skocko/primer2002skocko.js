@@ -9,25 +9,57 @@ console.log(kombinacija); //javlja gresku
 var k = 0;
 */
 
+/*
+statistika:
+    * vreme po partiji
+    * broj pobeda
+    * broj pokušaja
+
+let brojPokusaja = 0; // neće raditi jer svaki put kad otvorimo stranicu sve ide od nule
+
+localStorage:    // može da se upotrebi da čuva podatke u lokalu i nakon zatvaranja igre
+                // odavde možemo da dohvatimo promenljive
+    * setItem - postavljanje vrednosti u localStorage - parametri (key)
+        key - string
+        value - string
+
+        localStorage.setItem('brojPokusaja', 3); --> 3 se konvertuje u String ("3")
+    * getItem - dohvata vrednost iz localStorage - parametri (key)
+            povratna vrednost - string
+    * clear - brisanje celog sadržaja
+*/
+
 let kombinacija = [];
 let pokusaj = [];
 let br_pokusaja = 0;
 let pokusajPoz = 0;
+let vremePocetka;
+
 
 function init() {
     let simboliDiv = document.getElementById("simboli");
     for (let i = 0; i < simboli.length; i++) {
         let simbol = simboli[i];
-        // 
-        let simbolImg = document.createElement('img');
-        let imgName = "img/" + simbol + ".jpg";
-        simbolImg.setAttribute("src", imgName);
+        
+        let simbolImg = document.createElement('img'); // <img>
+        let imgName = "img/" + simbol + ".jpg"; 
+        simbolImg.setAttribute("src", imgName);  // <img src="img/karo.jpg"/>
         simbolImg.setAttribute("id", simbol); // može i bez ovoga, ali je kasnija obrada lakša
         simboliDiv.appendChild(simbolImg);
     }
-    // generisanje simbola
+
+    // "key" - "value"
+    // localStorage.setItem("pobeda", 0);
+    // localStorage.setItem("pobeda", 1);
+    // -------------------------------------------------------------------
+    // dohvatamo vrednost
+    // "key"
+    // let pobeda = localStorage.getItem("pobeda"); // vraća 1 ako imamo vrednost za tu promenljivu
+    // ovde generišemo simbole
     // simboli[1] = 'nesto';
     // console.log(simboli);
+    // let nekaVrednost = localStorage.getItem("nekiKljuc"); // vraća NULL ako nemamo taj ključ
+
 }
 
 function newGame() {
@@ -60,6 +92,7 @@ function newGame() {
     newAttempt();
     // generisanje nasumičnih kombinacija koje pogađamo
     generateNewCombo();
+    vremePocetka = Date.now(); // trenutak početka partije
 }
 
 function generateNewCombo() {
@@ -83,6 +116,8 @@ function newAttempt() {
     if (br_pokusaja == maks_br_pokusaja) {
         alert("Nije rešeno");
         // TODO: onemogućiti dalje kliktanje po simbolima
+        ukloniAtributNaKlik();
+        sacuvajStatistikuPartije(false);
         return;
     }
     pokusajPoz = 0;
@@ -101,15 +136,18 @@ function newAttempt() {
 
 // funkciji prosleđujemo koji smo simbol kliknuli
 function odaberiSimbol(simbol) {
-    // na id attempt_rbpokusaja_pozicija stavi odgovarajuću sliku
+    // sačuvaj u nizu sa pokušajima koji je simbol u pitanju  
     pokusaj[pokusajPoz] = simbol;
     // prikaži njegovu sliku
     imgSrc = "img/" + simbol + ".jpg";
+    // na id attempt_rbpokusaja_pozicija stavi odgovarajuću sliku
     imgId = "pokusaj_" + br_pokusaja + "_" + pokusajPoz;
-
     let imgDiv  = document.getElementById(imgId);
-    imgDiv.setAttribute("src", imgSrc);
 
+    console.log("imgDiv: " + imgDiv);
+
+    imgDiv.setAttribute("src", imgSrc);
+    // pređi na sledeću poziciju
     pokusajPoz++;
     // ukoliko smo izabrali celu kombinciju:
     if (pokusajPoz == br_elem_u_kombinaciji) {
@@ -127,6 +165,47 @@ function odaberiSimbol(simbol) {
 
 function zavrsiIgru() {
     // TODO:
+    alert("POBEDA!!!");
+    ukloniAtributNaKlik();
+    sacuvajStatistikuPartije(true); // ili 1, ako smo ranije napisali drugačiju logiku aplikacije
+}
+
+function sacuvajStatistikuPartije(pobeda) {
+    let vremeZavrsetka = Date.now();
+    let protekloVreme = vremeZavrsetka - vremePocetka; //  milisekunde
+    console.log(protekloVreme);
+
+    // let sacuvanaIgra = localStorage.getItem("igre" + brojIgara);
+        // games0, games1, games2...
+        //pokusaj#vreme, pokusaj#vreme, pokusaj#vreme
+    // let sacuvanoVreme = localStorage.getItem("vreme" + brojPartija);
+    // let brojPartija mora da se pamti u localStorage
+    // 2. mogućnost
+
+    let sacuvanaIgra = localStorage.getItem("igre");
+    // igre --> pokusaj#time0;pokusaj#time1;pokusaj#time2;
+    // čitanje => times.split(';') -> pokusaj#time0, pokusaj#time1, pokusaj#time2 => split...
+    if(sacuvanaIgra == null){
+        vremePocetka = "" + br_pokusaja + "#" + protekloVreme;
+    } else {
+        sacuvanaIgra += ";" + br_pokusaja + "#" + protekloVreme;
+    }
+
+    localStorage.setItem("igre", sacuvanaIgra);
+    let brojPobeda = localStorage.getItem("brojPobeda");
+    // pobeda - true / false, 1/0, brojPobeda = pobeda
+    if (brojPobeda == null){
+        if (pobeda){
+            brojPobeda = 1;
+        } else {
+            brojPobeda = 0;
+        }
+    } else {
+        if (pobeda){
+            brojPobeda = parseInt(brojPobeda) + 1;
+        }
+    }
+    localStorage.setItem("brojPobeda", brojPobeda);
 }
 
 function proveriKombinaciju() {
@@ -135,6 +214,7 @@ function proveriKombinaciju() {
     let crveni = 0;
     let zuti = 0;
     let netacniNiz = [];
+    let vratiVrednost = false;
 
     for (let i = 0; i < br_elem_u_kombinaciji; i++) {
         // kombincija: skočko, srce, karo, karo 
@@ -148,6 +228,10 @@ function proveriKombinaciju() {
             // 
             netacniNiz.push(kombinacija[i]);
         }
+    }
+
+    if (crveni == br_elem_u_kombinaciji) {
+        vratiVrednost = true;
     }
 
     // pokušaj: pik, '', skočko, tref
@@ -183,4 +267,13 @@ function proveriKombinaciju() {
     }
     let noviRed = document.createElement("br");
     pokusaj2Div.appendChild(noviRed);
+    return vratiVrednost;
+}
+
+function ukloniAtributNaKlik(){
+    let simboliDiv = document.getElementById("simboli");
+    let simboliImgs = simboliDiv.children;
+    for (i = 0; i < simboliImgs.length; i++){
+        simboliImgs[i].removeAttribute("onclick");
+    }
 }
