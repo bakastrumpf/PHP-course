@@ -42,15 +42,15 @@ function init() {
     let simboliDiv = document.getElementById("simboli");
     for (let i = 0; i < simboli.length; i++) {
         let simbol = simboli[i];
-        
+
         let simbolImg = document.createElement('img'); // <img>
-        let imgName = "img/" + simbol + ".jpg"; 
+        let imgName = "img/" + simbol + ".jpg";
         simbolImg.setAttribute("src", imgName);  // <img src="img/karo.jpg"/>
         simbolImg.setAttribute("id", simbol); // može i bez ovoga, ali je kasnija obrada lakša
         simboliDiv.appendChild(simbolImg);
     }
 
-    
+
 
     // "key" - "value"
     // localStorage.setItem("pobeda", 0);
@@ -65,10 +65,10 @@ function init() {
     // let nekaVrednost = localStorage.getItem("nekiKljuc"); // vraća NULL ako nemamo taj ključ
 }
 
-function intervalFunction(){
+function intervalFunction() {
     console.log(intervalTmp);
     intervalTmp++;
-    if (intervalTmp == 30){
+    if (intervalTmp == 30) {
         console.log("interval end");
         clearInterval();
         ukloniAtributNaKlik();
@@ -159,7 +159,7 @@ function odaberiSimbol(simbol) {
     imgSrc = "img/" + simbol + ".jpg";
     // na id attempt_rbpokusaja_pozicija stavi odgovarajuću sliku
     imgId = "pokusaj_" + br_pokusaja + "_" + pokusajPoz;
-    let imgDiv  = document.getElementById(imgId);
+    let imgDiv = document.getElementById(imgId);
 
     console.log("imgDiv: " + imgDiv);
 
@@ -193,8 +193,8 @@ function sacuvajStatistikuPartije(pobeda) {
     console.log(protekloVreme);
 
     // let sacuvanaIgra = localStorage.getItem("igre" + brojIgara);
-        // games0, games1, games2...
-        //pokusaj#vreme, pokusaj#vreme, pokusaj#vreme
+    // games0, games1, games2...
+    //pokusaj#vreme, pokusaj#vreme, pokusaj#vreme
     // let sacuvanoVreme = localStorage.getItem("vreme" + brojPartija);
     // let brojPartija mora da se pamti u localStorage
     // 2. mogućnost
@@ -202,7 +202,7 @@ function sacuvajStatistikuPartije(pobeda) {
     let sacuvanaIgra = localStorage.getItem("igre");
     // igre --> pokusaj#time0#ishod;pokusaj#time1#ishod;pokusaj#time2;
     // čitanje => times.split(';') -> pokusaj#time0, pokusaj#time1, pokusaj#time2 => split...
-    if(sacuvanaIgra == null){
+    if (sacuvanaIgra == null) {
         vremePocetka = "" + br_pokusaja + "#" + protekloVreme;
         // + "#" + pobeda;
     } else {
@@ -212,14 +212,14 @@ function sacuvajStatistikuPartije(pobeda) {
     localStorage.setItem("igre", sacuvanaIgra);
     let brojPobeda = localStorage.getItem("brojPobeda");
     // pobeda - true / false, 1/0, brojPobeda = pobeda
-    if (brojPobeda == null){
-        if (pobeda){
+    if (brojPobeda == null) {
+        if (pobeda) {
             brojPobeda = 1;
         } else {
             brojPobeda = 0;
         }
     } else {
-        if (pobeda){
+        if (pobeda) {
             brojPobeda = parseInt(brojPobeda) + 1;
         }
     }
@@ -238,10 +238,10 @@ function proveriKombinaciju() {
         // kombincija: skočko, srce, karo, karo 
         // pokušaj: pik, srce --> '', skočko, tref
         // problem: 
-        if (kombinacija[i] == pokusaj[i]){
+        if (kombinacija[i] == pokusaj[i]) {
             crveni++;
-            pokusaj[i]= '';
-        }else{
+            pokusaj[i] = '';
+        } else {
             // skočko, karo, srce
             // 
             netacniNiz.push(kombinacija[i]);
@@ -257,14 +257,14 @@ function proveriKombinaciju() {
     // -----------
     // pokušaj: skočko, '', zvezda, tref
     // netačno: skočko, skočko, srce
-    for(let elem of netacniNiz){
+    for (let elem of netacniNiz) {
         let ind = pokusaj.indexOf(elem);
-        if(ind != -1){
+        if (ind != -1) {
             // skočko, srce
             zuti++;
             pokusaj[ind] = '';
         }
-    }    
+    }
 
     // console.log(crveni);
     let pokusaj2Div = document.getElementById("pokusaji");
@@ -288,14 +288,14 @@ function proveriKombinaciju() {
     return vratiVrednost;
 }
 
-function ukloniAtributNaKlik(){
+function ukloniAtributNaKlik() {
     let simboliDiv = document.getElementById("simboli");
     let simboliImgs = simboliDiv.children;
-    for (i = 0; i < simboliImgs.length; i++){
+    for (i = 0; i < simboliImgs.length; i++) {
         simboliImgs[i].removeAttribute("onclick");
     }
 }
 
-function istorija(){
+function istorija() {
     window.open("primer2104istorija.html")
 }

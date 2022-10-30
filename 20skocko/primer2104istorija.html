@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="Prekvalifikacije, ETF, PHP, html5, JS" />
@@ -9,49 +10,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP#21 | Skočko | istorija </title>
     <script>
-        function init(){
+        function init() {
             let teloTabele = document.getElementById("teloTabele");
             let podaci = localStorage.getItem("igre");
             let pobede = localStorage.getItem("brojPobeda");
 
             // igre -> pokusaji#vreme0;pokusaji#vreme1;pokusaji#vreme2
-            if(podaci != null){
-                for (let igra of podaci.split(";")){
+            if (podaci != null) {
+                for (let igra of podaci.split(";")) {
                     // igra - pokusaji#vreme0
                     let pokusaji = igra.split("#")[0];
                     let vreme = igra.split("#")[1];
+
                     let tr = document.createElement("tr");
                     let td1 = document.createElement("td");
                     let td2 = document.createElement("td");
                     td1.innerHTML = pokusaji;
-                    td2.innerHTML = (vreme)/1000 + "sekund";
+                    td2.innerHTML = (vreme) / 1000 + "sekundi";
                     tr.appendChild(td1);
                     tr.appendChild(td2);
                     teloTabele.appendChild(tr);
                 }
-            } 
-            if (pobede != null){
-            let oznakePobeda = document.getElementById("pobede");
-            oznakePobeda.innerHTML = pobede;
+            }
+            if (pobede != null) {
+                let oznakePobeda = document.getElementById("pobede");
+                oznakePobeda.innerHTML = pobede;
             }
         }
     </script>
 </head>
+
 <body onload="init()">
-    Broj pobeda:  <p id="pobede"></p>
-        <table>
-            <thead>
-                <tr>
-                    <th>
-                        Broj pokušaja
-                    </th>
-                    <th>
-                        Vreme
-                    </th>
-                </tr>
-            </thead>
-            <tbody id="teloTabele">
-            </tbody>
-        </table>    
+    Broj pobeda: <p id="pobede"></p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Broj pokušaja
+                </th>
+                <th>
+                    Vreme
+                </th>
+            </tr>
+        </thead>
+        <tbody id="teloTabele">
+        </tbody>
+    </table>
 </body>
+
 </html>
