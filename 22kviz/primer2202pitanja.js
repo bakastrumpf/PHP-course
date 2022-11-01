@@ -3,21 +3,20 @@
 function dodajPitanja() {
     const textarea = document.getElementById("pitanja");
     const text = textarea.value;
-
-    console.log(text);
-
     const pitanja = text.split("(Q)").slice(1);
+    let lsPodatak = localStorage.getItem("pitanja");
+
+    // console.log(text);
     // console.log(pitanja, text);
-    let lsPodatak = localStorage.getItem("pitanja")
 
     for (const pitanje of pitanja) {
         let tekstPitanja = "";
         let tacanOdgovor = "";
         let odgovori = [];
-        const linije = pitanje.split("\n");
+        const linije = pitanje.split(" ");
         // console.log(pitanje.split("\n"))
 
-        for (let i = 0; i < linije.length; i++) {
+        for (let i = 0; i < linije.length; ++i) {
             if (i == 0) {
                 tekstPitanja = linije[i];
             } else if (linije[i].startsWith("(AA)")) {
@@ -31,7 +30,7 @@ function dodajPitanja() {
         // console.log(odgovori);
 
         let podatak = tekstPitanja + ";" + tacanOdgovor;
-        for (let i = 0; i < odgovori.length; i++) {
+        for (let i = 0; i < odgovori.length; ++i) {
             podatak += ";" + odgovori[i];
         }
 

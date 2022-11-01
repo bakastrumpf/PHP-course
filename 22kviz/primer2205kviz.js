@@ -1,11 +1,11 @@
 
 function dodajPitanja() {
-    window.open("primer2201pitanja.html")
+    window.open("primer2201pitanja.html");
 }
 
 let pitanja = null;
-let mojiOdgovori = null;
-let trenutnoPitanje = null;
+let mojiOdgovori = [];
+let trenutnoPitanje = 0;
 
 function izmesajUporedi(odgovor0, odgovor1) {
     // >0
@@ -17,7 +17,6 @@ function prikaziPitanje(index) {
     const tekstPitanja = items[0];
     const odgovori = items.slice(1);
     const main = document.getElementById("main");
-
     main.innerHTML = "";
     /**
      * <h1>tekstPitanja</h1>
@@ -45,31 +44,27 @@ function prikaziPitanje(index) {
         const li = document.createElement("li");
         li.innerHTML = odgovor;
         ul.appendChild(li);
-        li.setAttribute("onclick", "sledecePitanje(\"\")");
+        li.setAttribute("onclick", "sledecePitanje(\"" + odgovor + "\")");
     }
 
     const li = document.createElement("li");
-    li.innerHTML = "Preskoci";
+    li.innerHTML = "PRESKOČI PITANJE";
     ul.appendChild(li);
-    li.setAttribute("onclick", "sledecePitanje(\"\")");
+    li.setAttribute("onclick", "sledecePitanje()");
 }
 
 function izracunajRezultat() {
     let poeni = 0;
-    for (let i = 0; i < pitanja.length; i++) {
+    for (let i = 0; i < pitanja.length; ++i) {
         const tacanOdgovor = pitanja[i].split(";")[1];
 
-        if (mojiOdgovori[i] == "") {
-            // continue;
-
-            if (mojiOdgovori[i] == tacanOdgovor) {
-                poeni++;
-            } else if (mojiOdgovori[i] != tacanOdgovor && mojiOdgovori) {
-                poeni--;
-            }
+        if (mojiOdgovori[i] == tacanOdgovor) {
+            poeni++;
+        } else if (mojiOdgovori[i] != tacanOdgovor && mojiOdgovori[i] != "") {
+            poeni--;
         }
-        alert("Vaš rezultat: " + poeni);
     }
+    alert("Vaš rezultat: " + poeni);
 }
 
 function sledecePitanje(odgovor) {
@@ -88,6 +83,6 @@ function pocniKviz() {
     const lsPitanja = localStorage.getItem("pitanja");
     pitanja = lsPitanja.split("#");
     mojiOdgovori = [];
-    trenutnoPitanje = [];
+    trenutnoPitanje = 0;
     prikaziPitanje(0);
 }
