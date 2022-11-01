@@ -30,7 +30,7 @@ function dodajPitanja() {
         // console.log(odgovori);
 
         let podatak = tekstPitanja + ";" + tacanOdgovor;
-        for (let i = 0; i < odgovori.length; ++i) {
+        for (let i = 0; i < odgovori.length; i++) {
             podatak += ";" + odgovori[i];
         }
 
