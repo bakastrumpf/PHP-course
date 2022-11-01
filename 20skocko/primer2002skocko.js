@@ -65,6 +65,19 @@ function init() {
     // let nekaVrednost = localStorage.getItem("nekiKljuc"); // vraća NULL ako nemamo taj ključ
 }
 
+function prikaziResenje ( ) {
+    const attemptsDiv = document.getElementById ( "pokusaji" );
+
+    const noviRed = document.createElement ( "br" );
+    pokusaj2Div.appendChild (noviRed);
+    for ( let i = 0; i < kombinacija.length; ++i ) {
+        const resenjeImg = document.createElement ( "img" );
+        resenjeImg.setAttribute ( "id", "solution_" + i );
+        resenjeImg.setAttribute ( "src", "img/" + kombinacija[i] + ".jpg");
+        pokusaj2Div.appendChild (resenjeImg);
+    }
+}
+
 function intervalFunction() {
     console.log(intervalTmp);
     intervalTmp++;
@@ -74,7 +87,7 @@ function intervalFunction() {
         ukloniAtributNaKlik();
         sacuvajStatistikuPartije(false);
         // TODO: ispisivanje tražene kombinacije
-
+        prikaziResenje();
     }
 }
 
@@ -135,6 +148,7 @@ function newAttempt() {
         // TODO: onemogućiti dalje kliktanje po simbolima
         ukloniAtributNaKlik();
         sacuvajStatistikuPartije(false);
+        prikaziResenje();
         return;
     }
     pokusajPoz = 0;
@@ -160,9 +174,7 @@ function odaberiSimbol(simbol) {
     // na id attempt_rbpokusaja_pozicija stavi odgovarajuću sliku
     imgId = "pokusaj_" + br_pokusaja + "_" + pokusajPoz;
     let imgDiv = document.getElementById(imgId);
-
-    console.log("imgDiv: " + imgDiv);
-
+    // console.log("imgDiv: " + imgDiv);
     imgDiv.setAttribute("src", imgSrc);
     // pređi na sledeću poziciju
     pokusajPoz++;
