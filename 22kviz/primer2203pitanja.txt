@@ -1,0 +1,52 @@
+(Q)In which Italian city can you find the Colosseum?
+(A)Venice
+(AA)Rome
+(A)Naples
+(A)Milan
+(A)Florence
+(Q)In the TV show New Girl, which actress plays Jessica Day?
+(AA)Zooey Deschanel
+(A)Kaley Cuoco
+(A)Jennifer Aniston
+(Q)What is the largest canyon in the world?
+(A)Verdon Gorge, France
+(A)King’s Canyon, Australia
+(AA)Grand Canyon, USA
+(A)Fjaðrárgljúfur Canyon, Iceland
+(Q)How long is the border between the United States and Canada?
+(A)3,525 miles
+(A)4,525 miles
+(AA)5,525 miles
+(A)6,525 miles
+(A)7,525 miles
+(Q)What is the largest active volcano in the world?
+(A)Mount Etna
+(A)Mount Vesuvius
+(AA)Mouna Loa
+(A)Mount Batur
+(Q)When did Lenin die?
+(AA)21 January 1924
+(A)21 January 1934
+(A)21 January 1944
+(A)21 January 1954
+(A)21 January 1964
+(Q)In which US state did the ​​Scopes Monkey Trial happen?
+(A)Maryland
+(A)South Dakota
+(A)Indiana
+(AA)Tennessee
+(Q)When was the book “To Kill a Mockingbird” by Harper Lee published?
+(A)1950
+(AA)1961
+(A)1970
+(A)1980
+(Q)In which museum can you find Leonardo Da Vinci’s Mona Lisa?
+(AA)Le Louvre
+(A)Uffizi Museum
+(A)British Museum
+(A)Metropolitan Museum of Art
+(Q)In which city can you find the Prado Museum?
+(A)Buenos Aires
+(A)Barcelona
+(A)Santiago
+(AA)Madrid
