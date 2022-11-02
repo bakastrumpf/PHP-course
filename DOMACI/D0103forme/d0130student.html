@@ -50,75 +50,75 @@
 
         <table>
             <th>
-                <tr><td colspan="4" id="zaglavlje"><h1>Primer za ispit</h1></td></tr>
+                <tr><td colspan="4" id="zaglavlje"><h1>Пример: регистрација корисника</h1></td></tr>
                 <tr>
                     <td colspan="3" id="leviMeni">
-                        <form>
-                            <h4 id="unos">Unesite: </h4>
+                        <form name="formaReg" method="get" action="posalji.html">
+                            <h4 id="unos">Унесите: </h4>
                             <table cellspacing="5px" cellpadding="5px">
                                 <tr>
-                                    <td>Ime:</td>
-                                    <td><input type="text" placeholder="Upišite ime"></td>
-                                    <td>Prezime:</td>
-                                    <td><input type="text" placeholder="Upišite prezime"></td>
+                                    <td>Име:</td>
+                                    <td><input type="text" placeholder="Упишите име"></td>
+                                    <td>Презиме:</td>
+                                    <td><input type="text" placeholder="Упишите презиме"></td>
                                 </tr>
                                 <tr>
-                                    <td>Ulica:</td>
-                                    <td><input type="text" placeholder="Upišite ulicu i broj"></td>
-                                    <td>Poštanski broj:</td>
-                                    <td><input type="number" placeholder="Upišite poštanski broj"></td>
+                                    <td>Адреса:</td>
+                                    <td><input type="text" placeholder="Улица и број"></td>
+                                    <td>Поштански број:</td>
+                                    <td><input type="number" placeholder="5 цифара" size="5"></td>
                                 </tr>
                                 <tr>
-                                    <td>Pol:</td>
+                                    <td>Пол:</td>
                                     <td>
-                                        <input type="radio" name="pol" />Muški
+                                        <input type="radio" name="pol" />Мушки
                                         <br>
-                                        <input type="radio" name="pol" checked />Ženski
+                                        <input type="radio" name="pol" checked />Женски
                                     </td>
-                                    <td>Država:</td>
+                                    <td>Држава:</td>
                                     <td>
                                         <select name="drzava">
-                                            <option>Srbija</option>
-                                            <option>Crna Gora</option>
-                                            <option>Bosna i Hercegovina</option>
-                                            <option>Hrvatska</option>
-                                            <option>Makedonija</option>
+                                            <option>Србија</option>
+                                            <option>Црна Гора</option>
+                                            <option>Република Српска</option>
+                                            <option>Хрватска</option>
+                                            <option>Македонија</option>
                                         </select>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Korisničko ime:</td>
+                                    <td>Корисничко име:</td>
                                     <td><input type="text" placeholder="Upišite korisničko ime"></td>
-                                    <td>Lozinka:</td>
+                                    <td>Лозинка:</td>
                                     <td><input type="password" /></td>
                                 </tr>
                                 <tr>
                                     <td colspan="4" align="center">
-                                        <input id="dugme" type="submit" value="POTVRDI" />
-                                        <input id="dugme" type="reset" value="ODUSTANI" />
+                                        <input id="dugme" type="submit" value="РЕГИСТРУЈ СЕ" />
+                                        <input id="dugme" type="reset" value="ОДУСТАНИ" />
                                     </td>
                                 </tr>
                             </table>
                         </form>
                     </td>
                     <td id="desniMeni">
-                        <h2>Naslov</h2>
+                        <h2>Наслов</h2>
                         <ol type="I">
-                            <li>Element 1</li>
-                            <li>Element 2
+                            <li>Елемент 1</li>
+                            <li>Елемент 2
                                 <ul type="circle">
-                                    <li>podelement 1</li>
-                                    <li>podelement 2</li>
-                                    <li>podelement 3</li>
+                                    <li>поделемент 2.1</li>
+                                    <li>поделемент 2.2</li>
+                                    <li>поделемент 2.3</li>
                                 </ul>
                             </li>
-                            <li>Element 3</li>
-                            <li>Element 4</li>
+                            <li>Елемент 3</li>
+                            <li>Елемент 4</li>
                             </li>
                         </ol>
                     </td>
                 </tr>
-                <tr><td colspan="4" id="podnozje">podnožje dokumenta</td></tr>
+                <tr><td colspan="4" id="podnozje">подножје документа</td></tr>
             </th>
         </table>
     </div>
