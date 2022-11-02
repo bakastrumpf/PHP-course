@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="Prekvalifikacije, ETF, PHP, html5, css" />
@@ -8,8 +9,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forme: student</title>
+    <style type="text/css">
+        #glavniDiv {
+            width: fit-content;
+        }
+        #zaglavlje {
+            background-color: #00CC99;
+            text-align: center;
+        }
+        #leviMeni {
+            background-color: #FFFFCC;
+        }
+        #unos {
+            background-color: lightgray;
+            text-align: center;
+        }
+        #desniMeni {
+            background-color: #CCCCCC;
+        }
+        form {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div id="glavniDiv">
+
+        <table>
+            <th>
+                <tr><td colspan="4" id="zaglavlje"><h1>Primer za ispit</h1></td></tr>
+                <tr>
+                    <td colspan="3" id="leviMeni">
+                        <form>
+                            <h4 id="unos">Unesite: </h4>
+                            <table cellspacing="5px" cellpadding="5px">
+                                <tr>
+                                    <td>Ime:</td>
+                                    <td><input type="text" placeholder="Upišite ime"></td>
+                                    <td>Prezime:</td>
+                                    <td><input type="text" placeholder="Upišite prezime"></td>
+                                </tr>
+                                <tr>
+                                    <td>Ulica:</td>
+                                    <td><input type="text" placeholder="Upišite ulicu i broj"></td>
+                                    <td>Poštanski broj:</td>
+                                    <td><input type="number" placeholder="Upišite poštanski broj"></td>
+                                </tr>
+                                <tr>
+                                    <td>Pol:</td>
+                                    <td>
+                                        <input type="radio" name="pol" />Muški
+                                        <br>
+                                        <input type="radio" name="pol" checked />Ženski
+                                    </td>
+                                    <td>Država:</td>
+                                    <td>
+                                        <select name="drzava">
+                                            <option>Srbija</option>
+                                            <option>Crna Gora</option>
+                                            <option>Bosna i Hercegovina</option>
+                                            <option>Hrvatska</option>
+                                            <option>Makedonija</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Korisničko ime:</td>
+                                    <td><input type="text" placeholder="Upišite korisničko ime"></td>
+                                    <td>Lozinka:</td>
+                                    <td><input type="password" /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" align="center">
+                                        <input id="dugme" type="submit" value="POTVRDI" />
+                                        <input id="dugme" type="reset" value="ODUSTANI" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </td>
+                    <td id="desniMeni">
+                        <h2>Naslov</h2>
+                        <ol type="I">
+                            <li>Element 1</li>
+                            <li>Element 2
+                                <ul type="circle">
+                                    <li>podelement 1</li>
+                                    <li>podelement 2</li>
+                                    <li>podelement 3</li>
+                                </ul>
+                            </li>
+                            <li>Element 3</li>
+                            <li>Element 4</li>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr><td colspan="4" id="zaglavlje">podnožje dokumenta</td></tr>
+            </th>
+        </table>
+    </div>
 </body>
 </html>
