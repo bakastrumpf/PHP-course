@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="Prekvalifikacije, ETF, PHP, html5, css,forme" />
@@ -7,9 +7,134 @@
     <meta name="description" content="PHP: osnove HTMLa | forme | zadatak4" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forme: Avio kompanija</title>
+    <title>Форме: АВИОКОМПАНИЈА</title>
+    <style type="text/css">
+        #glavniDiv {
+            width: 70%;
+            align-self: center;
+        }
+        img {
+            height: 400px;
+            width: 200px;
+        }
+        #zaglavlje {
+            background-color: #b8b894;
+            text-align: center;
+        }
+        #podnozje {
+            background-color: #b8b894;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            
+        }
+        #info {
+            background-color: #d6d6c2;
+            text-align: center;
+        }
+        #centar {
+            align-self: center;
+            background-color: #e0e0d1;
+        }
+        #forma {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="glavniDiv">
+    <table>
+        <th>
+            <tr>
+                <td colspan="4" id="zaglavlje">
+                    <h1><i>Авио компанија</i></h1>
+                </td>
+            </tr>
+            
+        </th>
+        <tr>
+            <td colspan="4" id="info">
+                <h3><i>Попусти до 50% на све авиокарте купљене до 31.10.2022. године!</i></h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/grad.jpg">
+            </td>
+            <td colspan="2" id="centar">
+                <form name="kupovina" id="forma">
+                    <table cellspacing="10px">
+                        <caption><h3><i>Форма за куповину карата</i></h3></caption>
+                        <tr>
+                            <td>Име:</td>
+                            <td><input type="text" placeholder="Упишите име"></td>
+                        </tr>
+                        <tr>
+                            <td>Презиме:</td>
+                            <td><input type="text" placeholder="Упишите презиме"></td>
+                        </tr>
+                        <tr>
+                            <td>Мејл:</td>
+                            <td><input type="email" placeholder="Имејл адреса"></td>
+                        </tr>
+                        <tr>
+                            <td>Пол:</td>
+                            <td>
+
+                                <label for="id1">Женски: </label>
+                                <input type="radio" name="pol" value="zp" id="id1"/> 
+                                <label for="id2">Мушки: </label>
+                                <input type="radio" name="pol" value="mp" id="id2"/> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Полазак:</td>
+                            <td>
+                                <select name="drzava">
+                                    <option selected>Србија</option>
+                                    <option>Црна Гора</option>
+                                    <option>Република Српска</option>
+                                    <option>Хрватска</option>
+                                    <option>Македонија</option>
+                                </select>
+                        </tr>
+                        <tr>
+                            <td>Долазак:</td>
+                            <td>
+                                <select name="drzava2">
+                                    <option selected>Немачка</option>
+                                    <option>Француска</option>
+                                    <option>Холандија</option>
+                                    <option>Белгија</option>
+                                    <option>Швајцарска</option>
+                                </select>
+                        </tr>
+                        <tr>
+                            <td>Пртљаг:</td>
+                            <td>
+                                <input type="checkbox" name="prtljag" value="rucni"/>Ручни
+                                <input type="checkbox" name="prtljag" value="predati"/>Предати
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <input type="submit" value="ПОТВРДИ"/>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+            <td>
+                <img src="images/grad.jpg">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" id="podnozje">
+                <i>Подножје документа</i>
+            </td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
