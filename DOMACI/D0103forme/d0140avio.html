@@ -17,29 +17,32 @@
             height: 400px;
             width: 200px;
         }
-        #zaglavlje {
+        .zaglavlje {
             background-color: #b8b894;
             text-align: center;
         }
-        #podnozje {
+        .podnozje {
             background-color: #b8b894;
             padding-top: 10px;
             padding-bottom: 10px;
             text-align: center;  
         }
-        #info {
+        .info {
             background-color: #d6d6c2;
             text-align: center;
         }
-        #centar {
+        .centar {
             align-self: center;
             background-color: #e0e0d1;
         }
-        #forma {
+        .forma {
             padding-left: 100px;
             padding-right: 100px;
             padding-top: 10px;
             padding-bottom: 30px;
+        }
+        #blue {
+            color: #00004d;
         }
     </style>
 </head>
@@ -47,19 +50,19 @@
     <div id="glavniDiv">
     <table cellspacing="3px">
         <th>
-            <tr><td colspan="4" id="zaglavlje"><h1><i>Авио компанија</i></h1></td></tr>
+            <tr><td colspan="4" class="zaglavlje"><h1><i>Авио компанија</i></h1></td></tr>
         </th>
         <tr>
-            <td colspan="4" id="info"><h3><i>Попусти до 50% на све авиокарте купљене до 31.10.2022. године!</i></h3></td>
+            <td colspan="4" class="info" id="blue"><h3><i>Попусти до 50% на све авиокарте купљене до 31.10.2022. године!</i></h3></td>
         </tr>
         <tr>
             <td>
                 <img src="images/grad.jpg">
             </td>
-            <td colspan="2" id="centar">
-                <form name="kupovina" id="forma">
+            <td colspan="2" class="centar">
+                <form name="kupovina" class="forma">
                     <table cellspacing="10px">
-                        <caption><h3><i>Форма за куповину карата</i></h3></caption>
+                        <caption id="blue"><h3><i>Форма за куповину карата</i></h3></caption>
                         <tr>
                             <td><b>Име:</b></td>
                             <td><input type="text" placeholder="Упишите име"></td>
@@ -125,7 +128,7 @@
             </td>
         </tr>
         <tr>
-            <td colspan="4" id="podnozje">
+            <td colspan="4" class="podnozje">
                 <i>Подножје документа</i>
             </td>
         </tr>
