@@ -25,8 +25,7 @@
             background-color: #b8b894;
             padding-top: 10px;
             padding-bottom: 10px;
-            text-align: center;
-            
+            text-align: center;  
         }
         #info {
             background-color: #d6d6c2;
@@ -39,24 +38,19 @@
         #forma {
             padding-left: 100px;
             padding-right: 100px;
+            padding-top: 10px;
+            padding-bottom: 30px;
         }
     </style>
 </head>
 <body>
     <div id="glavniDiv">
-    <table>
+    <table cellspacing="3px">
         <th>
-            <tr>
-                <td colspan="4" id="zaglavlje">
-                    <h1><i>Авио компанија</i></h1>
-                </td>
-            </tr>
-            
+            <tr><td colspan="4" id="zaglavlje"><h1><i>Авио компанија</i></h1></td></tr>
         </th>
         <tr>
-            <td colspan="4" id="info">
-                <h3><i>Попусти до 50% на све авиокарте купљене до 31.10.2022. године!</i></h3>
-            </td>
+            <td colspan="4" id="info"><h3><i>Попусти до 50% на све авиокарте купљене до 31.10.2022. године!</i></h3></td>
         </tr>
         <tr>
             <td>
@@ -67,21 +61,20 @@
                     <table cellspacing="10px">
                         <caption><h3><i>Форма за куповину карата</i></h3></caption>
                         <tr>
-                            <td>Име:</td>
+                            <td><b>Име:</b></td>
                             <td><input type="text" placeholder="Упишите име"></td>
                         </tr>
                         <tr>
-                            <td>Презиме:</td>
+                            <td><b>Презиме:</b></td>
                             <td><input type="text" placeholder="Упишите презиме"></td>
                         </tr>
                         <tr>
-                            <td>Мејл:</td>
+                            <td><b>Мејл:</b></td>
                             <td><input type="email" placeholder="Имејл адреса"></td>
                         </tr>
                         <tr>
-                            <td>Пол:</td>
+                            <td><b>Пол:</b></td>
                             <td>
-
                                 <label for="id1">Женски: </label>
                                 <input type="radio" name="pol" value="zp" id="id1"/> 
                                 <label for="id2">Мушки: </label>
@@ -89,7 +82,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Полазак:</td>
+                            <td><b>Полазак:</b></td>
                             <td>
                                 <select name="drzava">
                                     <option selected>Србија</option>
@@ -98,9 +91,10 @@
                                     <option>Хрватска</option>
                                     <option>Македонија</option>
                                 </select>
+                            </td>
                         </tr>
                         <tr>
-                            <td>Долазак:</td>
+                            <td><b>Долазак:</b></td>
                             <td>
                                 <select name="drzava2">
                                     <option selected>Немачка</option>
@@ -109,9 +103,10 @@
                                     <option>Белгија</option>
                                     <option>Швајцарска</option>
                                 </select>
+                            </td>
                         </tr>
                         <tr>
-                            <td>Пртљаг:</td>
+                            <td><b>Пртљаг:</b></td>
                             <td>
                                 <input type="checkbox" name="prtljag" value="rucni"/>Ручни
                                 <input type="checkbox" name="prtljag" value="predati"/>Предати
