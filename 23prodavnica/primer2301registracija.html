@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Prekvalifikacije, ETF, PHP, html5, JS" />
+    <meta name="author" content="TŠ | MS" />
+    <meta name="description" content="PHP: JS basics" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP#23 | Prodavnica: regKor</title>
+    <link rel="stylesheet" href="primer2303stilovi.css">
+</head>
+<body onload="init()">
+    <h1>Registracija</h1>
+    <div class="forma">
+        <label for="korisnickoIme">Korisničko ime: </label>
+        <br><span class="greska" id="korisnickoImeGreska"></span>
+        <input type="text" id="korisnickoIme" placeholder="Unesite korisničko ime...">
+        
+        <label for="mejl">Mejl: </label>
+        <br><span class="greska" id="mejlGreska"></span>
+        <input type="text" id="mejl" placeholder="Unesite mejl...">
+        
+        <label for="telefon">Telefon: </label>
+        <br><span class="greska" id="telefonGreska"></span>
+        <input type="text" id="telefon" placeholder="Unesite broj telefona u formatu +381 6x xxx-xxx(x)...">
+        
+        <label for="lozinka">Lozinka: </label>
+        <br><span class="greska" id="lozinkaGreska"></span>
+        <input type="text" id="lozinka" placeholder="Unesite lozinku...">
+        
+        <label for="potvrdaLozinke">Potvrda lozinke: </label>
+        <br><span class="greska" id="potvrdaLozinkeGreska"></span>
+        <input type="text" id="potvrdaLozinke" placeholder="Potvrdite unetu lozinku...">
+
+        <button onclick="registrujSe()">Registruj se</button>
+        <hr>
+        <span>
+            Imate nalog? Prijavite se <a href="">ovde</a>.
+        </span>
+    </div>
+
+    <script src="primer2302prodavnica.js"></script>
+</body>
+</html>
