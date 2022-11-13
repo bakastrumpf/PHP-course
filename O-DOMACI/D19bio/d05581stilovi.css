@@ -1,0 +1,82 @@
+body {
+    background-color: rgb(43, 43, 43);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aqua;
+}
+
+#glavniDiv {
+    width: 1000px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.ime {
+    text-align: center;
+}
+
+#centar {
+    float: left;
+    width: 70%;
+    margin: 10px;
+    padding: 10px;
+}
+
+#desnaTraka {
+    float: right;
+    width: 20%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.topMeni {
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    margin-top: 10;
+    margin-bottom: 5px;
+    padding: 10px;
+    justify-self: center;
+    float: unset;
+    
+}
+
+.topMeni a, a {
+    text-decoration: underline overline;
+    color: rgb(251, 255, 0);
+    text-align: center;
+}
+
+.topMeni a:visited, a {
+    color: rgb(234, 0, 255);
+}
+
+.topMeni a:hover, a {
+    text-transform: capitalize;
+    text-decoration: line-through;
+}
+
+.topMeni a:active, a:active {
+    color: rgb(153, 43, 255);
+}
+
+.spisak a {
+    text-decoration: underline overline;
+    color: rgb(251, 255, 0);
+    text-align: center;
+}
+
+.spisak a:hover {
+    color: rgb(234, 0, 255);
+    text-transform: capitalize;
+    text-decoration: line-through;
+}
+
+table {
+    padding: 10px;
+    margin: 10px;
+}
+
+td {
+    padding: 10px;
+    margin: 10px;
+}

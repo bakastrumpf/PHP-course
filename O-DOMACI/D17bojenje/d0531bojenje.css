@@ -1,0 +1,28 @@
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    border: 1px solid;
+    height: 70px;
+    width: 70px;
+}
+
+img {
+    height: 70px;
+    width: 70px;
+}
+
+.blue {
+    background-color: aqua;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.green {
+    background-color: green;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Prekvalifikacije, ETF, PHP, html5, css, JS" />
+    <meta name="author" content="Marija Savić" />
+    <meta name="description" content="PHP: JavaScript | zadatak15" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 15: računaljka</title>
+</head>
+
+<body>
+    <fieldset style="width: 200px;">
+        <legend>Дигитрон</legend>
+        <form name="racunaljka" action="" method="">
+            Први број:
+            <input type="text" name="prvi" size="3" value="0" />
+            <br>
+            <label for="operacija">Операција:</label>
+            
+            <select name="operacija" id="operacija">
+                <option name="zbir" value="zbir" >+</option>
+                <option name="razlika" value="razlika" >-</option>
+                <option name="proizvod" value="proizvod" >*</option>
+                <option name="deljenje" value="deljenje" >/</option>
+            </select>
+            <br>
+            Други број:
+            <input type="text" name="drugi" size="3" value="0" />  
+            <br>       
+            <button id="znakJednakosti" type="button" onclick="izracunaj()" > = </button>
+            <input type="text" name="rezultat" id="rezultat" size="5">
+        </form>
+    </fieldset>
+
+    <script src="d0511racunaljka.js"></script>
+
+</body>
+
+</html>

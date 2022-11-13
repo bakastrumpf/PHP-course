@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Prekvalifikacije, ETF, PHP, html5, css, JS" />
+    <meta name="author" content="Marija Savić" />
+    <meta name="description" content="PHP: JavaScript | zadatak19" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadatak 19: contact | Марија САВИЋ</title>
+
+    <link rel="stylesheet" type="text/css" href="d05581stilovi.css">
+    <link rel="stylesheet" type="text/css" href="d05582forma.css">
+    <script src="d0559script.js"></script>
+</head>
+
+<body>
+
+    <div id="glavniDiv">
+
+        <div id="zaglavlje">
+            <div class="topMeni">
+                <a href="d0551bio.html">Почетна</a>
+                <a href="d0552edu.html">Образовање</a>
+                <a href="d0553pubs.html">Писанија</a></a>
+                <a href="d0554web.html">Веб</a>
+                <a href="d0555work.html">Каријера</a>
+                <a href="d0556misc.html">Разно</a>
+                <a href="d0557contact.html">Контакт</a>
+            </div>
+
+            <div class="ime">
+                <h1>Марија Савић</h1>
+                <p>Junior solution developer</p>
+                <hr>
+            </div>
+        </div>
+
+        <div id="sadrzaj">
+            <!--dodaj sliku-->
+
+            <div id="desnaTraka">
+                <div class="spisak">
+                    <h4>Новости</h4>
+                    <hr>
+                    <h5>Последње публикације</h5>
+                    <p><a href="https://digitalna.ff.uns.ac.rs/sadrzaj/2021/978-86-6065-636-2"><abbr
+                                title="септембар 2021. године"> СРНА</abbr></a></p>
+                    <p><a href="https://zupa.today/pdfs/Sustainable%20rural%20tourism%20in%20Montenegro.pdf"><abbr
+                                title="август 2018. године">Sustainable
+                                rural tourism in Montenegro: guidelines for prospective development</abbr></a></p>
+                    <hr>
+                    <h5>Пискарање</h5>
+                    <p>ДОВРШИ</p>
+                    <p>ДОВРШИ</p>
+                    <hr>
+                </div>
+            </div>
+
+            <div id="centar">
+                <div id="formaKontakt">
+                    <form name="forma" action="" method="get">
+                        <label for="email">Имејл адреса:</label>
+                        <br>
+                        <input type="text" id="mejl" name="mejl" placeholder="постојећа имејл адреса">
+                        <br>
+                        <label for="komentar">Порука:</label>
+                        <br>
+                        <textarea id="komentar" name="komentar" rows="15" cols="75"
+                            placeholder="Упишите поруку"></textarea>
+                        <br>
+                        <br>
+                        <input id="dugmeForma" type="submit" value="ПОШАЉИ" onclick="posalji()">
+                    </form>
+                    <div id="poruka"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

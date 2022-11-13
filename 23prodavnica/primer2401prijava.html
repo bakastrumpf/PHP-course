@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP#24 | shop | login</title>
+    <link rel="stylesheet" href="primer2303stilovi.css">
+</head>
+
+<body onload="init()">
+    <div class="form">
+        <label for="korisnickoIme">Korisničko ime: </label>
+        <span class="greska" id="korisnickoImeGreska"></span>        
+        <input type="text" id="korisnickoIme" placeholder="Unesite korisnicko ime">
+
+        <label for="lozinka">Lozinka: </label>
+        <span class="greska" id="lozinkaGreska"></span>
+        <input type="text" id="lozinka" placeholder="Unesite lozinku">
+
+        <button onclick="prijava()">Prijavi se</button>
+        <hr>
+        <span>
+            Nemate nalog? Registrujte se <a href="primer2301registracija.html">ovde</a>.
+        </span>
+    
+    </div>
+
+    <script src="primer2302prodavnica.js"></script>
+    
+</body>
+</html>

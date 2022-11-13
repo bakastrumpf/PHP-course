@@ -114,6 +114,8 @@ function dodajKorisnika() {
     localStorage.setItem("nizKorisnika", tekstNizKorisnika);
 }
 
+
+
 function registrujSe() {
     // resetujGreske(); // može i ovde
     // pokupimo podatke i proverimo da li su u ispravnom formatu
@@ -126,6 +128,23 @@ function registrujSe() {
             dodajKorisnika();
         }
     }
+
+    // return; // implicitno
+}
+
+function prijava(){
+    let korIme = document.getElementById("korisnickoIme").value;
+    let loz = document.getElementById("lozinka").value;
+
+    for (let i = 0; i < nizKorisnika.length; i++){
+        let trenutniKorisnik = nizKorisnika[i];
+        if (nizKorisnika[i].korisnickoIme == korIme && nizKorisnika[i].lozinka == loz){
+            localStorage.setItem("ulogovaniKorisnik", korIme);
+            localStorage.setItem("ulogovaniKorisnikMejl", nizKorisnika[i].mejl);
+            window.location.href = "primer2402prodavnica.html";
+        }
+    }
+
 }
 
 // objašnjenje
