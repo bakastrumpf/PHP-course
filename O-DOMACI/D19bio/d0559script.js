@@ -1,5 +1,5 @@
 function proveriMejl() {
-    var mejl = document.getElementById("mejl").value;
+    var mejl = document.getElementById("email").value;
     // alert(mejl);
     var reg = new RegExp("^([a-z0-9_\\.-]+)@([a-z]+\\.)+[a-z]{2,10}$", "i");
     var match = mejl.match(reg);
