@@ -93,3 +93,7 @@ td {
 #fotoMS {
     width: 200px;
 }
+
+table.karate, td {
+    border: 1px dotted aqua;
+}
