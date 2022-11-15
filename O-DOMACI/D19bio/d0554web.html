@@ -1,66 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="Prekvalifikacije, ETF, PHP, html5, css, JS" />
-    <meta name="author" content="Marija Savić" />
-    <meta name="description" content="PHP: JavaScript | zadatak19" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zadatak 19: web work | Марија САВИЋ</title>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="Prekvalifikacije, ETF, PHP, html5, css, JS" />
+  <meta name="author" content="Marija Savić" />
+  <meta name="description" content="PHP: JavaScript | zadatak19" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zadatak 19: web work | Марија САВИЋ</title>
 
-    <link rel="stylesheet" type="text/css" href="d05581stilovi.css">
-    <link rel="stylesheet" type="text/css" href="d05582forma.css">
-    
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="d0542autoskola.css">
+
+  <link rel="stylesheet" type="text/css" href="d05581stilovi.css">
+  <link rel="stylesheet" type="text/css" href="d05582forma.css">
+  <script src="d0559script.js"></script>
 </head>
-<body>
 
-    <div id="glavniDiv">
+<body onload="stoperica()">
 
-        <div id="zaglavlje">
-            <div class="topMeni">
-                <a href="d0551bio.html">Почетна</a>
-                <a href="d0552edu.html">Образовање</a>
-                <a href="d0553pubs.html">Писанија</a></a>
-                <a href="d0554web.html">Веб</a>
-                <a href="d0555work.html">Каријера</a>
-                <a href="d0556misc.html">Разно</a>
-                <a href="d0557contact.html">Контакт</a>
-            </div>
+  <b id="vreme">00.00 </b>
 
-            <div class="ime">
-                <h1>Марија Савић</h1>
-                <p>Junior solution developer</p>
-                <hr>
-            </div>
-        </div>
+  <div id="glavniDiv">
 
-        <div id="sadrzaj">
-            <!--dodaj sliku-->
+    <div id="zaglavlje">
+      <div class="topMeni">
+        <a href="d0551bio.html">Почетна</a>
+        <a href="d0552edu.html">Образовање</a>
+        <a href="d0553pubs.html">Писанија</a></a>
+        <a href="d0554web.html">Веб</a>
+        <a href="d0555work.html">Каријера</a>
+        <a href="d0556misc.html">Разно</a>
+        <a href="d0557contact.html">Контакт</a>
+      </div>
 
-            <div id="desnaTraka">
-                <div class="spisak">
-                    <h4>Новости</h4>
-                    <hr>
-                    <h5>Последње публикације</h5>
-                    <p><a href="https://digitalna.ff.uns.ac.rs/sadrzaj/2021/978-86-6065-636-2"><abbr title="септембар 2021. године"> СРНА</abbr></a></p>
-                    <p><a href="https://zupa.today/pdfs/Sustainable%20rural%20tourism%20in%20Montenegro.pdf"><abbr title="август 2018. године">Sustainable
-                        rural tourism in Montenegro: guidelines for prospective development</abbr></a></p>
-                    <hr>
-                    <h5>Пискарање</h5>
-                    <p>ДОВРШИ</p>
-                    <p>ДОВРШИ</p>
-                    <hr>
-                </div>
-            </div>
-
-            <div id="centar">
-                
-            </div>
-
-        </div>
-  
+      <div class="ime">
+        <h1>Марија Савић</h1>
+        <p>Junior solution developer</p>
+        <hr>
+      </div>
     </div>
-    
+
+    <div id="sadrzaj">
+      <!--dodaj sliku-->
+
+      <div id="desnaTraka">
+        <div class="spisak">
+          <h4>Новости</h4>
+          <hr>
+          <h5>Последње публикације</h5>
+          <p><a target="_blank" href="https://digitalna.ff.uns.ac.rs/sadrzaj/2021/978-86-6065-636-2"><abbr
+                title="септембар 2021. године"> СРНА</abbr></a></p>
+          <p><a href="https://zupa.today/pdfs/Sustainable%20rural%20tourism%20in%20Montenegro.pdf"><abbr
+                title="август 2018. године">Sustainable
+                rural tourism in Montenegro: guidelines for prospective development</abbr></a></p>
+          <hr>
+          <h5>Пискарање</h5>
+          <p>ДОВРШИ</p>
+          <p>ДОВРШИ</p>
+          <hr>
+        </div>
+      </div>
+
+      <div id="centar">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col">
+              <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="imgs/d05541.jpg" class="d-block w-100" alt="NS pod snegom">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="imgs/d05542.jpg" class="d-block w-100" alt="Letnji put iz Crne Gore ka Prijepolju">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imgs/d05543.jpg" class="d-block w-100" alt="Velika plaža u Ulcinju">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imgs/d05544.jpg" class="d-block w-100" alt="Podgorica">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imgs/d05545.jpg" class="d-block w-100" alt="Morača">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imgs/d05546.jpg" class="d-block w-100" alt="Ovčar i Kablar">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imgs/d05547.jpg" class="d-block w-100" alt="Begečka jama">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imgs/d05548.jpg" class="d-block w-100" alt="Žeželjev most | noćni mod na telefonu">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imgs/d05549.jpg" class="d-block w-100"
+                      alt="Fruška gora | Put od Vrdnika ka Iriškom vencu">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imgs/d055410.png" class="d-block w-100" alt="Majur pod snegom">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </body>
+
 </html>

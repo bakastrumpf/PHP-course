@@ -1,11 +1,11 @@
 table {
-    border: 1px solid;
+    border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
 }
 
 td {
-    border: 1px solid;
+    border: 1px solid black;
     height: 70px;
     width: 70px;
 }
@@ -14,6 +14,11 @@ img {
     height: 70px;
     width: 70px;
 }
+
+/*
+čemu ovo služi a pritom ni ne radi?
+šta rade ove 3 klase i zašto su u kodu?
+*/
 
 .blue {
     background-color: aqua;

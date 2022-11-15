@@ -1,9 +1,16 @@
+// TODO:
+// sredi regekse da RADE!!!
+// localStorage: čuva podatke o prijavi
+// jmbg: regeks - poslednje dve cifre 1 i 0 - mora peške da se piše, ne može raspon 0-1
+// alert: ako su neka polja nepopunjena
+// uspešna prijava prebacuje na novu stranicu
+// nova stranica ispisuje podatke o prijavi + iznos rate za odabranu kategoriju (npr. 80 hiljada / 6 rata =  13333 dinara)
+
 function proveriIme(){
     let ime = document.getElementById("ime").value;
     if (ime == null){
         return false;
-    }
-    
+    } 
 }
 
 function proveriPrezime(){

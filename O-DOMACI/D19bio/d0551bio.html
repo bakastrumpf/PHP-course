@@ -12,25 +12,30 @@
 
     <link rel="stylesheet" type="text/css" href="d05581stilovi.css">
     <link rel="stylesheet" type="text/css" href="d05582forma.css">
+    <script src="d0559script.js"></script>
 
 </head>
 
-<body>
+<body onload="stoperica()">
+
+    <b id="vreme">00.00 </b>
+
     <div id="glavniDiv">
 
         <div id="zaglavlje">
             <div class="topMeni">
                 <a href="d0551bio.html">Почетна</a>
                 <a href="d0552edu.html">Образовање</a>
-                <a href="d0553pubs.html">Писанија</a></a>
-                <a href="d0554web.html">Веб</a>
+                <a href="d0553pubs.html">Публикације</a></a>
+                <a href="d0554web.html">Дизајн</a>
                 <a href="d0555work.html">Каријера</a>
                 <a href="d0556misc.html">Разно</a>
                 <a href="d0557contact.html">Контакт</a>
             </div>
 
             <div class="ime">
-                <h1>Марија Савић</h1>
+                <h1>Марија Савић
+                </h1>
                 <p>Junior solution developer</p>
                 <hr>
             </div>
@@ -43,14 +48,14 @@
                 <div class="spisak">
                     <h4>Новости</h4>
                     <hr>
-                    <h5>Последње публикације</h5>
+                    <h5>Академске</h5>
                     <p><a target="_blank" href="https://digitalna.ff.uns.ac.rs/sadrzaj/2021/978-86-6065-636-2"><abbr
                                 title="септембар 2021. године"> СРНА</abbr></a></p>
                     <p><a href="https://zupa.today/pdfs/Sustainable%20rural%20tourism%20in%20Montenegro.pdf"><abbr
                                 title="август 2018. године">Sustainable
                                 rural tourism in Montenegro: guidelines for prospective development</abbr></a></p>
                     <hr>
-                    <h5>Пискарање</h5>
+                    <h5>Шкработине</h5>
                     <p>ДОВРШИ</p>
                     <p>ДОВРШИ</p>
                     <hr>
@@ -63,7 +68,9 @@
                         <tr>
                             <td>
                                 <p><q>Jack of all trades, master of none</q></p>
-
+                            </td>
+                            <td>
+                                <img id="fotoMS" src="imgs/IMG_20200418_2345442.jpg">
                             </td>
                         </tr>
                     </tbody>
@@ -84,7 +91,7 @@
                 </p>
                 <hr>
 
-                <h3>Претходни послови</h3>
+                <h3>Претходно</h3>
                 <table>
                     <tbody>
                         <tr>
@@ -122,8 +129,8 @@
                 </table>
                 <hr>
 
-                <h3>IT Skills</h3>
-                <ul type="disc">
+                <h3>Вештине</h3>
+                <ul type="disc" class="kolone">
                     <li>Object-oriented programming</li>
                     <li>Java</li>
                     <li>MySQL databases</li>
@@ -140,8 +147,8 @@
                 </ul>
 
                 <hr>
-                <h3>Languages</h3>
-                <ul type="disc">
+                <h3>Језици</h3>
+                <ul type="disc" class="kolone">
                     <li>
                         BSC, native
                     </li>
