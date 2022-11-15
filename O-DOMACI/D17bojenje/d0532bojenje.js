@@ -11,6 +11,7 @@ function dodajSliku() {
     let slike = Array.from(document.getElementsByTagName("img"));
     // ne radi:
     // let slike = document.getElementsByTagName("img");
+    console.log(slike);
     // radi s pravljenjem niza kroz Array.from !?
     // svakom dobavljenom polju postavi atribut na sliku
     slike.forEach(slika => {

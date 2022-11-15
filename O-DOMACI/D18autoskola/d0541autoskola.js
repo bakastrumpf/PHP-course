@@ -8,21 +8,21 @@
 
 function proveriIme(){
     let ime = document.getElementById("ime").value;
-    if (ime == null){
+    if (ime == ""){
         return false;
     } 
 }
 
 function proveriPrezime(){
     let prezime = document.getElementById("prezime").value;
-    if (prezime == null){
+    if (prezime == ""){
         return false;
     }
 }
 
 function proveriAdresu(){
     let adresa = document.getElementById("adresa").value;
-    if (adresa == null){
+    if (adresa == ""){
         return false;
     }
 }
@@ -31,7 +31,7 @@ function proveriJmbg(){
     let jmbg = document.getElementById("jmbg").value;
     var reg = new RegExp("^\d{13}$");
 
-    // [0-9]{11}+[1]{1}+[0]{1}
+    // \d{11}[1]{1}[0]{1}
     var pos = jmbg.search(reg);
 }
 
