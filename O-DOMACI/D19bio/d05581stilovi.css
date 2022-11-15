@@ -94,6 +94,6 @@ td {
     width: 200px;
 }
 
-table.karate, td {
+table.karate {
     border: 1px dotted aqua;
 }

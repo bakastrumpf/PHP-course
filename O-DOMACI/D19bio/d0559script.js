@@ -65,7 +65,7 @@ function posalji() {
 
 // ideja:
 // povezati formu da poruke šalje na imejl adresu
-// kažu da to ne može:
+// ne može:
 // izvor: https://html.form.guide/email-form/html-email-form/
 // izvor: https://www.emailjs.com/docs/tutorial/creating-contact-form/
 // kroz bek može, kod Nebojše to radili kroz Javu prošle godine
