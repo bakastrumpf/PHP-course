@@ -69,6 +69,12 @@ function posalji() {
 }
 
 
+// TODO: localStorage
+// sačuvaj poruke u localStorage
+// svaka poruka da ima ID
+// poruke se čuvaju u nizu
+// prikaz poruka sortiranih po imejl adresi
+
 let svePoruke = [];
 
 function prijave(){
@@ -78,11 +84,7 @@ function prijave(){
     }
 }
 
-// TODO: localStorage
-// sačuvaj poruke u localStorage
-// svaka poruka da ima ID
-// poruke se čuvaju u nizu
-// prikaz poruka sortiranih po imejl adresi
+
 
 // ideja:
 // povezati formu da poruke šalje na imejl adresu

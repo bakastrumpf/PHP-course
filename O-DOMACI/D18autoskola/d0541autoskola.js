@@ -6,35 +6,16 @@
 // uspešna prijava prebacuje na novu stranicu
 // nova stranica ispisuje podatke o prijavi + iznos rate za odabranu kategoriju (npr. 80 hiljada / 6 rata =  13333 dinara)
 
-function pribaviIme(){
+function poslatiPodaci(){
     var ime = document.getElementById("ime").value;
-}
-
-function pribaviPrezime(){
     let prezime = document.getElementById("prezime");
-}
-
-function pribaviAdresu(){
     let adresa = document.getElementById("adresa");
-}
-
-function pribaviJmbg(){
     let jmbg = document.getElementById("jmbg");
-}
-
-function pribaviKategoriju(){
     let kat = document.getElementById("kat");
-}
-
-function pribaviRatu(){
     let rata = document.getElementById("rate");
-}
-
-function iznosRate(){
     var r = document.getElementById("rate").value;
     // var c = 
     var iznos = 0;
-
     
 }
 

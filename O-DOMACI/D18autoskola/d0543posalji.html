@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="d0542autoskola.css">
 </head>
 
-<body>
+<body onload="poslatiPodaci()">
     <div class="glavniDiv">
         <div class="row">
             <!--slika-->
@@ -45,20 +45,53 @@
                 <!--prikaz podataka iz forme-->
 
                 <!--
-
                     име:
                     презиме:
                     адреса:
                     јмбг:
                     категорија:
                     износ за уплату:
-
                 -->
 
                 <fieldset style="width: 200px;">
                     <legend>Послати подаци: </legend>
                     <form name="poslatiPodaci" method="GET" action="d0540autoskola.html" >
                         <br>
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Име: </td>
+                                    <td><input type="text" id="ime" disabled></td>
+                                </tr>
+                                <tr>
+                                    <td>Презиме: </td>
+                                    <td><input type="text" id="prezime" disabled></td>
+                                </tr>
+                                <tr>
+                                    <td>Адреса: </td>
+                                    <td><input type="text" id="adresa" disabled></td>
+                                </tr>
+                                <tr>
+                                    <td>ЈМБГ: </td>
+                                    <td><input type="text" id="jmbg" disabled></td>
+                                </tr>
+                                <tr>
+                                    <td>Категорија: </td>
+                                    <td><input type="text" id="kat" disabled></td>
+                                </tr>
+                                <tr>
+                                    <td>Број рата: </td>
+                                    <td><input type="text" id="rate" disabled></td>
+                                </tr>
+                                <tr>
+                                    <td>Износ рате: </td>
+                                    <td><input type="text" id="rate" disabled></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!--
                         <p onclick="pribaviIme()"> име:</p>
                         <p onclick="pribaviPrezime()"> презиме:</p>
                         <p onclick="pribaviAdresu()"> адреса:</p>
@@ -66,10 +99,8 @@
                         <p onclick="pribaviKategoriju()"> категорија:</p>
                         <p onclick="pribaviRatu()"> број рата:</p>
                         <p onclick="iznosRate()">износ рате: </p>
-
-                        <!--               
-                    document.getElementById("write").innerHTML = window.location.search;
-                    -->
+                        -->
+                        
                     </form>
                 </fieldset>
 

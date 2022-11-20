@@ -105,9 +105,9 @@
                             <td colspan="5"> категорија: </td>
                             <td colspan="5">
                                 <ul type="none">
-                                    <li><input type="radio" name="kat" value="katA" /> А </li>
-                                    <li> <input type="radio" name="kat" value="katB" /> Б </li>
-                                    <li> <input type="radio" name="kat" value="katC" /> Ц </li>
+                                    <li><input type="radio" id="kat" name="kat" value="katA" /> А </li>
+                                    <li> <input type="radio" id="kat" name="kat" value="katB" /> Б </li>
+                                    <li> <input type="radio" id="kat"id="kat" name="kat" value="katC" /> Ц </li>
                                 </ul>
                             </td>
                         </tr>
@@ -115,7 +115,7 @@
                         <tr>
                             <td colspan="5"> Број рата: </td>
                             <td colspan="5">
-                                <select name="rate">
+                                <select name="rate" id="rate">
                                     <option selected>3</option>
                                     <option>6</option>
                                     <option>12</option>
@@ -125,7 +125,7 @@
 
                         <tr>
                             <td colspan="10">
-                                <input name="dugme" id="dugme" type="button" value="posalji" onClick="posalji()" />
+                                <input name="dugme" id="dugme" type="button" class="btn" value="posalji" onClick="posalji()" />
                             </td>
                         </tr>
                     </table>
