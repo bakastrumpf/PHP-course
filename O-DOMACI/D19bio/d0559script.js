@@ -33,6 +33,15 @@ setInterval(function(){
 }, 60000);
 */
 
+
+function proveriIme(){
+    var ime = document.getElementById("ime").value;
+    // alert("Hej");
+    var reg = new RegExp("^[a-z]{3,20}$", "i");
+    var match = ime.match;
+    return match != null;
+}
+
 function proveriMejl() {
     var mejl = document.getElementById("email").value;
     // alert(mejl);
@@ -43,20 +52,22 @@ function proveriMejl() {
 }
 
 function proveriTel() {
-    var tel = document.getElementById("tel");
-    var reg = new RegExp("^\\+?(\\(\\d+\\)|\\d+/?)[\\d ]+$");
-    var pos = tel.search(reg);
-    return pos != -1;
+    var tel = document.getElementById("telefon");
+    var reg = new RegExp("^\\+?(\\(\\d+\\)|\\d+/?)[\\d]+$");
+    var match = tel.match(reg);
+    return match != null;
 }
 
 function proveriPoruku() {
-    var poruka = document.getElementById("poruka").value;
-    if (poruka == "")
+    var poruka2 = document.getElementById("poruka").value;
+    if (poruka2 == "")
         return false;
 }
 
-function posalji() {
+function proveriPodatke() {
     var poruka = "";
+    if(!proveriIme())
+        poruka += "Нисте унели име. ";
     if (!proveriMejl())
         poruka += "Нисте унели имејл адресу. ";
     if (!proveriTel())
@@ -68,23 +79,21 @@ function posalji() {
     document.getElementById("poruka").innerHTML = poruka;
 }
 
-
 // TODO: localStorage
 // sačuvaj poruke u localStorage
 // svaka poruka da ima ID
 // poruke se čuvaju u nizu
 // prikaz poruka sortiranih po imejl adresi
 
-let svePoruke = [];
 
-function prijave(){
-    var podaciPoruka = localStorage.getItem("svePoruke");
-    if (podaciPoruka != null){
-        svePoruke = JSON.parse(podaciPoruka);
-    }
-}
+// let poslatePoruke = [];
 
-
+// function prijave(){
+//     var podaciPoruka = localStorage.getItem("poslatePoruke");
+//     if (podaciPoruka != null){
+//         poslatePoruke = JSON.parse(podaciPoruka);
+//     }
+// }
 
 // ideja:
 // povezati formu da poruke šalje na imejl adresu
