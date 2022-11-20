@@ -1,26 +1,37 @@
-function stoperica() {
-    alert("Добродошли!");
-    let vreme = 0;
+/*
+let vreme = 0;
+let sekunde;
+let minute;
+let time = "";
 
-    // TODO: na svaki minut iskače obaveštenje o vremenu provedenom na sajtu
-    // inicijalizuj brojanje vremena od 0
-    // sekunde pretvori u minute
-    // setInterval
-    // alert ("Na sajtu ste proveli" + vreme + "minuta");
+// TODO: na svaki minut iskače obaveštenje o vremenu provedenom na sajtu
+// inicijalizuj brojanje vremena od 0
+// sekunde pretvori u minute
+// setInterval
+// alert ("Na sajtu ste proveli" + vreme + "minuta");
 
-    setInterval(function () {
-        // alert("Your time is ticking");
-        vreme++;
+// alert("Добродошли!");
+
+// treba nam samo interval a ne funkcija!!!
+// jer treba da se učita čim e sajt otvori 
+// i da otad broji vreme
+// i da redovno izbacuje ALERT
+
+setInterval(function(){
+    vreme++;
         // time = 67s;
-        let sekunde = vreme % 60;
-        let minute = Math.floor(vreme / 60);
+    sekunde = vreme % 60;
+    minute = Math.floor(vreme / 60);
 
-        document.getElementById("vreme").innerHTML =
-            (minute < 10 ? "0" : "") + minute + "." +
-            (sekunde < 10 ? "0" : "") + sekunde;
+    time = (minute < 10 ? "0" : "") + minute 
+    + "." 
+    + (sekunde < 10 ? "0" : "") + sekunde;
     }, 1000);
-    alert("Na sajtu ste proveli" + vreme + "minuta");
-}
+
+setInterval(function(){
+    alert("Na sajtu ste " + vreme);
+}, 60000);
+*/
 
 function proveriMejl() {
     var mejl = document.getElementById("email").value;
@@ -40,7 +51,7 @@ function proveriTel() {
 
 function proveriPoruku() {
     var poruka = document.getElementById("poruka").value;
-    if (poruka == null)
+    if (poruka == "")
         return false;
 }
 
@@ -55,6 +66,16 @@ function posalji() {
     if (poruka == "")
         poruka = "Честитамо. Успешно сте послали поруку. ";
     document.getElementById("poruka").innerHTML = poruka;
+}
+
+
+let svePoruke = [];
+
+function prijave(){
+    var podaciPoruka = localStorage.getItem("svePoruke");
+    if (podaciPoruka != null){
+        svePoruke = JSON.parse(podaciPoruka);
+    }
 }
 
 // TODO: localStorage

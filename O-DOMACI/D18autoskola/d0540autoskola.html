@@ -18,23 +18,22 @@
     <link rel="stylesheet" type="text/css" href="d0542autoskola.css">
 </head>
 
-<body>
+<body onload="prijave()">
     <div class="glavniDiv">
         <div class="row">
             <!--slika-->
             <img src="AutoSkolaImgs/slika.jpeg" id="slikaDiv">
         </div>
+        
         <div class="row">
-            <!--nav-->
-            <nav class="navbar navbar-light bg-light">
-                <div class="container-fluid" id="navigacija">
-                    <span class="navbar-text">
-                        Siguran put do vozačke dozvole.
-                        <br>
-                        Pozovite nas odmah: 011/123-456
-                    </span>
-                </div>
-            </nav>
+            <div class="col" id="navigacija">
+                <!--nav-->
+                <span>
+                    Siguran put do vozačke dozvole.
+                    <br>
+                    Pozovite nas odmah: 011/123-456
+                </span>
+            </div>
         </div>
         <div class="row">
             <!--divForma-->
@@ -79,40 +78,42 @@
                     </tr>
                 </table>
 
-                <form name="prijaviSe" method="get" action="posalji.html">
+                <form name="prijaviSe" method="post" action="d0543posalji.html">
                     <caption>
                         <center><b>Prijavite se odmah!</b> </center>
                     </caption>
                     <table>
                         <tr>
-                            <td>Ime:</td>
-                            <td><input type="text" id="ime" placeholder="Upišite ime"></td>
-                            <td>Prezime:</td>
-                            <td><input type="text" id="prezime" placeholder="Upišite prezime"></td>
+                            <td>Име:</td>
+                            <td><input type="text" id="ime" name="ime" placeholder="Upišite ime"></td>
+                            <td>Презиме:</td>
+                            <td><input type="text" id="prezime" name="prezime" placeholder="Upišite prezime"></td>
                         </tr>
 
                         <tr>
-                            <td>Adresa:</td>
-                            <td><input type="text" id="adresa" placeholder="Ulica i broj"></td>
-                            <td>JMBG:</td>
-                            <td><input type="text" id="jmbg" placeholder="jmbg: 13 cifara"></td>
+                            <td>Адреса:</td>
+                            <td><input type="text" id="adresa" name="adresa" placeholder="Улица и број"></td>
+                            <!--Улица и број нају да сам твој заувек
+                                постао сам мрак да могу да те загрлим-->
+                            <td>ЈМБГ:</td>
+                            <td><input type="text" id="jmbg" name="jmbg" placeholder="xxxx xxx xxx x10"></td>
                         </tr>
                     </table>
                     <hr>
                     <table>
                         <tr>
-                            <td colspan="5"> Kategorija: </td>
+                            <td colspan="5"> категорија: </td>
                             <td colspan="5">
                                 <ul type="none">
-                                    <li><input type="radio" name="kat" value="katA" /> A </li>
-                                    <li> <input type="radio" name="kat" value="katB" /> B </li>
-                                    <li> <input type="radio" name="kat" value="katC" /> C </li>
+                                    <li><input type="radio" name="kat" value="katA" /> А </li>
+                                    <li> <input type="radio" name="kat" value="katB" /> Б </li>
+                                    <li> <input type="radio" name="kat" value="katC" /> Ц </li>
                                 </ul>
                             </td>
                         </tr>
 
                         <tr>
-                            <td colspan="5"> Broj rata: </td>
+                            <td colspan="5"> Број рата: </td>
                             <td colspan="5">
                                 <select name="rate">
                                     <option selected>3</option>
@@ -125,8 +126,6 @@
                         <tr>
                             <td colspan="10">
                                 <input name="dugme" id="dugme" type="button" value="posalji" onClick="posalji()" />
-
-                                
                             </td>
                         </tr>
                     </table>

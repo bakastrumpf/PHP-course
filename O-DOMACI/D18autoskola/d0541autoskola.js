@@ -6,46 +6,147 @@
 // uspešna prijava prebacuje na novu stranicu
 // nova stranica ispisuje podatke o prijavi + iznos rate za odabranu kategoriju (npr. 80 hiljada / 6 rata =  13333 dinara)
 
+function pribaviIme(){
+    var ime = document.getElementById("ime").value;
+}
+
+function pribaviPrezime(){
+    let prezime = document.getElementById("prezime");
+}
+
+function pribaviAdresu(){
+    let adresa = document.getElementById("adresa");
+}
+
+function pribaviJmbg(){
+    let jmbg = document.getElementById("jmbg");
+}
+
+function pribaviKategoriju(){
+    let kat = document.getElementById("kat");
+}
+
+function pribaviRatu(){
+    let rata = document.getElementById("rate");
+}
+
+function iznosRate(){
+    var r = document.getElementById("rate").value;
+    // var c = 
+    var iznos = 0;
+
+    
+}
+
+
+let svePrijave = [];
+function prijave(){
+    var podaciPrijava = localStorage.getItem("svePrijave");
+    if (podaciPrijava != null){
+        svePrijave = JSON.parse(podaciPrijava);
+    }
+}
+
+/*
+function izracunaj() {
+    var a = parseInt(document.racunaljka.prvi.value);
+    var b = parseInt(document.racunaljka.drugi.value);
+    var rez = 0;
+    var operacija=document.racunaljka.operacija.value;
+
+    if ((isNaN(a) == false) && (isNaN(b) == false)) {
+        switch (operacija) {
+            case "zbir": rez = a + b;
+                break;
+            case "razlika": rez = a - b;
+                break;
+            case "proizvod": rez = a * b;
+                break;
+            case "deljenje": if (b == 0)
+                        rez = "Забрањено дељење нулом!";
+                        // alert ("Забрањено дељење нулом!")
+                    else
+                        rez = a / b;
+                break;
+            default: rez = "Непостојећа операција";
+            // alert ("Непостојећа операција")
+        }
+        document.racunaljka.rezultat.value = rez;
+    } else {
+        document.racunaljka.rezultat.value = "Рачунаљка ради само с целим бројевима!";
+    }
+}
+*/
+
+
 function proveriIme(){
-    let ime = document.getElementById("ime").value;
+    var ime = document.getElementById("ime").value;
+    var reg = new RegExp("^[a-z]{3,20}$", "i");
+    var match = ime.match;
+    return match != null;
+
+    /*
     if (ime == ""){
         return false;
     } 
+    */
+    
+    /*
+    var korIme = document.getElementById('korisnicko_ime').value;
+    var reg = new RegExp("^[a-z][a-z0-9_]{4,11}$", "i");
+    var match = korIme.match(reg);
+    return match != null;
+    */
+
 }
 
 function proveriPrezime(){
-    let prezime = document.getElementById("prezime").value;
+    var prez = document.getElementById("prezime").value;
+    var reg = new RegExp("^[a-z]{3,20}$", "i");
+    var match = prez.match;
+    return match != null;
+
+    /*
     if (prezime == ""){
         return false;
     }
+    */
 }
 
 function proveriAdresu(){
-    let adresa = document.getElementById("adresa").value;
+    var adr = document.getElementById("adresa").value;
+    var reg = new RegExp("^[a-z][]0-9]{5,20}$", "i");
+    var match = adr.match;
+    return match != null;
+    
+    /*
     if (adresa == ""){
         return false;
     }
+    */
 }
 
 function proveriJmbg(){
-    let jmbg = document.getElementById("jmbg").value;
-    var reg = new RegExp("^\d{13}$");
+    var jmbg = document.getElementById("jmbg").value;
+    var reg = new RegExp("^\d{11}[1]{1}[0]{1}");
 
-    // \d{11}[1]{1}[0]{1}
-    var pos = jmbg.search(reg);
+    // ^(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[012])[0-9]{9}$
+
+    var match = jmbg.match;
+    return match != null;
 }
 
 function posalji(){
     var poruka = "";
     if (!proveriIme())
-        poruka += "Niste uneli ime. ";
+        poruka += "Нисте унели име. ";
     if (!proveriPrezime())
-        poruka += "Niste uneli prezime. ";
+        poruka += "Нисте унели презиме. ";
     if (!proveriAdresu())
-        poruka += "Niste uneli adresu. ";
+        poruka += "Нисте унели адресу. ";
     if (!proveriJmbg())
-        poruka += "Niste uneli JMBG ili postoji greška u formatu. "
+        poruka += "Нисте унели ЈМБГ или постоји грешка у формату. ЈМБГ има 13 цифара, последње две су 1 и 0. "
     if (poruka == "")
-        poruka = "Sve je u redu. Uspešno ste se prijavili za obuku. ";
+        poruka = "Успешно сте се пријавили за обуку. Ускоро ће вам се отворити нова страница. ";
     document.getElementById("poruka").innerHTML = poruka;
 }
