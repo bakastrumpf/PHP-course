@@ -54,7 +54,6 @@ a {
 
 .topMeni a:hover,
 a {
-    text-transform: capitalize;
     text-decoration: line-through;
 }
 
@@ -98,6 +97,7 @@ table.karate {
     border: 1px dotted aqua;
 }
 
+/*
 #accordion-header {
     background-color: rgb(43, 43, 43);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -115,4 +115,4 @@ table.karate {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: aqua;
 }
-
+*/

@@ -33,6 +33,10 @@ setInterval(function(){
 }, 60000);
 */
 
+setInterval(() => {
+    alert ("Prošao je 1 minut")
+}, 60000);
+
 
 function proveriIme(){
     var ime = document.getElementById("ime").value;
