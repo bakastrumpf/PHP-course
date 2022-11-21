@@ -82,7 +82,7 @@ function sledecePitanje(odgovor) {
 function pocniKviz() {
     const lsPitanja = localStorage.getItem("pitanja");
     pitanja = lsPitanja.split("#");
-    console.log(lsPitanja);
+    // console.log(lsPitanja);
     // izvor: https://bobbyhadz.com/blog/javascript-typeerror-string-split-is-not-a-function
     // toString.split I DALJE NE RADI
     mojiOdgovori = [];
