@@ -10,11 +10,11 @@ function dodajPitanja() {
     // console.log(pitanja, text);
 
     for (const pitanje of pitanja) {
+        // console.log(pitanje.split("\n"))
         let tekstPitanja = "";
         let tacanOdgovor = "";
         let odgovori = [];
-        const linije = pitanje.split(" ");
-        // console.log(pitanje.split("\n"))
+        const linije = pitanje.split("\n");
 
         for (let i = 0; i < linije.length; ++i) {
             if (i == 0) {
@@ -30,7 +30,7 @@ function dodajPitanja() {
         // console.log(odgovori);
 
         let podatak = tekstPitanja + ";" + tacanOdgovor;
-        for (let i = 0; i < odgovori.length; i++) {
+        for (let i = 0; i < odgovori.length; ++i) {
             podatak += ";" + odgovori[i];
         }
 

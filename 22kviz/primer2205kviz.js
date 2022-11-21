@@ -16,8 +16,8 @@ function prikaziPitanje(index) {
     const items = pitanja[index].split(";");
     const tekstPitanja = items[0];
     const odgovori = items.slice(1);
-    const main = document.getElementById("main");
-    main.innerHTML = "";
+    const kviz = document.getElementById("kviz");
+    kviz.innerHTML = "";
     /**
      * <h1>tekstPitanja</h1>
      * <br>
@@ -30,13 +30,13 @@ function prikaziPitanje(index) {
 
     const h1 = document.createElement("h1");
     h1.innerHTML = tekstPitanja;
-    main.appendChild(h1);
+    kviz.appendChild(h1);
 
     const noviRed = document.createElement("br");
-    main.appendChild(noviRed);
+    kviz.appendChild(noviRed);
 
     const ul = document.createElement("ul");
-    main.appendChild(ul);
+    kviz.appendChild(ul);
 
     odgovori.sort(izmesajUporedi);
 
@@ -44,11 +44,11 @@ function prikaziPitanje(index) {
         const li = document.createElement("li");
         li.innerHTML = odgovor;
         ul.appendChild(li);
-        li.setAttribute("onclick", "sledecePitanje(\"" + odgovor + "\")");
+        li.setAttribute("onclick", "sledecePitanje(\"\")");
     }
 
     const li = document.createElement("li");
-    li.innerHTML = "PRESKOČI PITANJE";
+    li.innerHTML = "ПРЕСКОЧИ ПИТАЊЕ";
     ul.appendChild(li);
     li.setAttribute("onclick", "sledecePitanje()");
 }
@@ -64,7 +64,7 @@ function izracunajRezultat() {
             poeni--;
         }
     }
-    alert("Vaš rezultat: " + poeni);
+    prompt("Ваш резултат: " + poeni);
 }
 
 function sledecePitanje(odgovor) {

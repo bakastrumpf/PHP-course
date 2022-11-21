@@ -19,7 +19,6 @@ function poslatiPodaci(){
     
 }
 
-
 let svePrijave = [];
 function prijave(){
     var podaciPrijava = localStorage.getItem("svePrijave");
@@ -27,38 +26,6 @@ function prijave(){
         svePrijave = JSON.parse(podaciPrijava);
     }
 }
-
-/*
-function izracunaj() {
-    var a = parseInt(document.racunaljka.prvi.value);
-    var b = parseInt(document.racunaljka.drugi.value);
-    var rez = 0;
-    var operacija=document.racunaljka.operacija.value;
-
-    if ((isNaN(a) == false) && (isNaN(b) == false)) {
-        switch (operacija) {
-            case "zbir": rez = a + b;
-                break;
-            case "razlika": rez = a - b;
-                break;
-            case "proizvod": rez = a * b;
-                break;
-            case "deljenje": if (b == 0)
-                        rez = "Забрањено дељење нулом!";
-                        // alert ("Забрањено дељење нулом!")
-                    else
-                        rez = a / b;
-                break;
-            default: rez = "Непостојећа операција";
-            // alert ("Непостојећа операција")
-        }
-        document.racunaljka.rezultat.value = rez;
-    } else {
-        document.racunaljka.rezultat.value = "Рачунаљка ради само с целим бројевима!";
-    }
-}
-*/
-
 
 function proveriIme(){
     var ime = document.getElementById("ime").value;
@@ -87,11 +54,6 @@ function proveriPrezime(){
     var match = prez.match;
     return match != null;
 
-    /*
-    if (prezime == ""){
-        return false;
-    }
-    */
 }
 
 function proveriAdresu(){
@@ -100,19 +62,14 @@ function proveriAdresu(){
     var match = adr.match;
     return match != null;
     
-    /*
-    if (adresa == ""){
-        return false;
-    }
-    */
 }
 
 function proveriJmbg(){
     var jmbg = document.getElementById("jmbg").value;
-    var reg = new RegExp("^\d{11}[1]{1}[0]{1}");
+    var reg = new RegExp("^(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[012])[0-9]{9}$");
 
-    // ^(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[012])[0-9]{9}$
-
+    // ^\d{11}[1]{1}[0]{1}
+    
     var match = jmbg.match;
     return match != null;
 }
@@ -130,4 +87,8 @@ function posalji(){
     if (poruka == "")
         poruka = "Успешно сте се пријавили за обуку. Ускоро ће вам се отворити нова страница. ";
     document.getElementById("poruka").innerHTML = poruka;
+    setTimeout(() => {
+        window.open("d0543posalji.html");
+        }, 5000);
+    
 }
