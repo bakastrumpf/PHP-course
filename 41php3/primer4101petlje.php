@@ -14,14 +14,12 @@
 <body>
     <?php
 
-    // 1. zadatak: promenljiva koja sadrži string
-    // ispisati vrednost preko echo
+    # 1. zadatak: promenljiva koja sadrži string
+    # ispisati vrednost preko echo
     $ime = 'Marija';
     echo $ime;
 
-    // declare(strict_types=1);
-
-    // 2. zadatak: f-ja koja prima parametar i ispisuje ga
+    # 2. zadatak: f-ja koja prima parametar i ispisuje ga
     function ispisImena($ime)
     {
         // global $ime;
@@ -33,6 +31,10 @@
     echo '<br> Ja sam ' . ispisImena($ime) . '.<br>';
 
     echo "<hr>";
+
+    /* STRIKTNI TIPOVI PROMENLJIVIH */
+
+    // declare(strict_types=1);
 
     $a = 5;
 
@@ -47,8 +49,8 @@
 
     echo "<hr>";
 
-    // 3. zadatak: f-ja koja vraća proizvod 2 broja
-    // pozvati f-ju i ispisati rezultat
+    # 3. zadatak: f-ja koja vraća proizvod 2 broja
+    # pozvati f-ju i ispisati rezultat
     function proizvod($c, $d)
     {
         return $c * $d;
@@ -61,11 +63,25 @@
     $e = 10;
     $f = 5;
 
-    $e += $f; // $e = $e + $f;
+    $e += $f;   //  =>  $e = $e + $f;
 
-    echo ++$e;
-    echo $e++;
-    echo $e;
+    echo ++$e;  // preinkrementacija odmah uveća i ispisuje novi rezultat   // 11
+    echo $e;    // 11
+
+    echo $f++;  // postinkrementacija prvo ispiše stari rezultat, pa uveća  // 5
+    echo $f;    // pa u novom redu ispisuje novi rezultat                   // 6
+
+    echo "<hr>";
+
+    /* REFERENCA & */
+
+    $l = 5;
+    $m = 10;
+    $l *= $m;   // 50
+    ++$l;       // 51
+    $n = $l;    // 51
+    // $n = &$l;    
+    $l = $m;    // 10
 
     echo "<hr>";
 
@@ -83,13 +99,17 @@
 
     echo "<hr>";
 
+    /* LOGIČKI OPERATORI */
+
+    // && T ako su oba tačna
+    // || T ako je bar jedan tačan 
+
     $ocena = 5;
 
-    // (5>7)||(3>4) // F || T = T
+    // (5>7)||(3<4) // F || T = T
     // ((2>1)&&(3>5))&&((4>5)||(2>1)) // ((T)&&(F))&&((F)||(T)) = F&&T = F
 
     if ($ocena == 5) {
-
         // if($ocena<=5){
         echo "FAIL";
     } else {
@@ -102,6 +122,7 @@
 
     echo " | ";
 
+    /* TERNARNI OPERATOR ? */
     echo ($ocena > 5) ? "Polozio" : "Pao";
 
     echo "<hr>";
@@ -109,6 +130,17 @@
     echo gettype($ocena);
 
     echo "<hr>";
+
+    if ($ocena == 5) {
+        echo "pao";
+    } else {
+        echo "položio";
+    }
+
+    echo "<hr>";
+
+    # 4. zadatak: napisati funkciju za poređenje 2 broja
+    # pozvati funkciju i proslediti joj 2 broja
 
     // $a = 5;
     // $b = 7;
@@ -162,6 +194,8 @@
 
     echo "<hr>";
 
+    # 5. zadatak: napisati SWITCH koji ispisuje godišnje doba
+
     $godDoba = 5;
     switch ($godDoba) {
         case '1': {
@@ -187,7 +221,9 @@
 
     echo "<hr>";
 
-    // while loop
+    /* WHILE LOOP */
+    // prvo se proverava uslov pa ulazi u petlju ako je uslov ispunjen
+
     $broj = 0;
     while ($broj < 10) {
         echo $broj . " ";
@@ -195,6 +231,9 @@
     }
 
     echo "<hr>";
+
+    # 6. zadatak: brojač ide do 10 i ispisuje parne brojeve
+    # kad dođe do 8 izlazi iz petlje i ispisuje 8 kao poslednji broj
 
     $broj = 0;
     while ($broj < 10) {
@@ -208,13 +247,14 @@
 
     echo "<hr>";
 
+    # 7. zadatak napisati kroz petlju FOR
     for ($i = 0; $i < 10; $i += 2) {
         echo " " . $i . " ";
     }
 
     echo "<hr>";
 
-    // zadatak: for od 1 do 10, ispisuje kvadrate brojeva
+    # 8. zadatak: for od 1 do 10, ispisuje kvadrate brojeva
     for ($i = 1; $i < 10; $i++) {
         echo "&nbsp;" . $i * $i . "&nbsp";
         "<br>";
@@ -222,7 +262,8 @@
 
     echo "<hr>";
 
-    // zadatak: for od 1 do 20, ispisuje parne brojeva
+    # 9. zadatak: for od 1 do 20, ispisuje parne brojeva
+    # ne uvećavati broj za 2 nego proveriti ostatak pri deljenju sa 2, i%2==0
     for ($i = 1; $i <= 20; $i++) {
         if ($i % 2 == 0)
             echo "&nbsp;" . $i . " ";
@@ -230,9 +271,22 @@
 
     echo "<hr>";
 
-    // BREAK prekida izvršavanje petlje
+    /* petlja DO-WHILE */
+    // uslov se proverava nakon PRVE iteracije
+
+    $broj = 12;
+    do{
+        if ($broj == 8) {
+            echo "Izlazimo iz petlje kad dođemo do 8";
+        } else {
+            echo $broj . " ";
+        }
+        $broj += 2;
+    } while ($broj<10);
+
+    /* BREAK -  prekid izvršavanje petlje | najčešće se koristi */
     for ($i = 1; $i <= 20; $i++) {
-        echo "&nbsp;" . $i . " ";
+        echo "&nbsp;" . $i . " ";           // ispisaće brojeve 1 i 2 i izaći iz petlje
         if ($i % 2 == 0) {
             break;
         }
@@ -241,52 +295,64 @@
 
     echo "<hr>";
 
-    // CONTINUE prelazi na sledeću iteraciju u petlji
+    /* CONTINUE preskače trenutnu iteraciju i prelazi na sledeću iteraciju u petlji */
     for ($i = 1; $i <= 20; $i++) {
         if ($i % 2 == 0) {
-            continue;
+            continue;                       // ispisaće 1, 3, 5, 7, ..., 19
         }
-        echo "&nbsp;" .$i. " ";
+        echo "&nbsp;" . $i . " ";
     }
 
     echo "<hr>";
 
-    // CONTINUE prelazi na sledeću iteraciju u petlji
+    /* CONTINUE prelazi na sledeću iteraciju u petlji */
     for ($i = 1; $i <= 20; $i++) {
         if ($i % 5 == 0) {
-            continue; // kao da radimo i++
+            continue; // kao da radimo i++     // ispisaće sve brojeve koji NISU deljivi sa 5
         }
-        echo "&nbsp;" .$i. " ";
+        echo "&nbsp;" . $i . " ";
     }
 
     echo "<hr>";
 
     for ($i = 1; $i <= 20; $i++) {
         if ($i > 5)
-        continue; 
-        echo "&nbsp;" .$i. " ";
+            continue;                           // ispisaće sve brojeve od 1 do 5          
+        echo "&nbsp;" . $i . " ";
     }
 
     echo "<hr>";
 
     for ($i = 1; $i <= 20; $i++) {
-        if ($i == 5)
-        continue; 
-        echo "&nbsp;" .$i. " ";
+        if ($i == 5)    
+            continue;                           // ispisaće sve brojeve osim 5
+        echo "&nbsp;" . $i . " ";
     }
+
+    /* EXIT izlazi iz cele skripte PHP */
 
     echo "<hr>";
 
-    // petlja od 1 do 10 ispisuje neparne brojeve
-    // kad dodje do 5, prekida
-    // kad dodje do 5, nastavlja
+    #10. zadatak: petlja od 1 do 10 ispisuje neparne brojeve
+    # varijacija: kad dodje do 5, prekida
 
     for ($i = 1; $i <= 10; $i++) {
         // echo "&nbsp;" . $i . " ";
-        if ($i == 5) 
+        if ($i == 5)
+            break;
+            // continue;
+        if ($i % 2 != 0)
+            echo "&nbsp;" . $i . " ";
+    }
+
+    # varijacija: kad dodje do 5, nastavlja
+
+    for ($i = 1; $i <= 10; $i++) {
+        // echo "&nbsp;" . $i . " ";
+        if ($i == 5)
             // break;
             continue;
-        if($i%2!=0)
+        if ($i % 2 != 0)
             echo "&nbsp;" . $i . " ";
     }
 
