@@ -27,7 +27,7 @@
         echo "<br>Stringovi su isti<br>";
 
     if(strcasecmp(substr($recenica, 10, 4), "nova")==0)
-        echo "<br>Stringovi su isti<br>";
+        echo "<br>Stringovi su isti, osim što veličine slova nisu iste.<br>";
 
     printf("<br>Dužina rečenice \"%s\" je %d znaka.<br>", $recenica, strlen($recenica));
 
@@ -43,7 +43,5 @@
     $a = 0;
     eval("$a = 2*(1+9)");
     echo $a;
-
-    
 
 ?>
