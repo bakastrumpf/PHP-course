@@ -22,22 +22,7 @@ DOBRODOŠLI, <?= $_SESSION['korisnik'] ?>!
 
 <?php
 
-$pozorista = [
-    1 => "Позориште на Теразијама",
-    2 => "Југословенско драмско позориште",
-    3 => "Београдско драмско позориште",
-    4 => "Звездара театар",
-    5 => "Народно позориште",
-    6 => "Атеље 212",
-    7 => "Позориште Славија",
-    8 => "Мадленианум",
-    9 => "Театар Вук",
-    10 => "Театар на Брду",
-    11 => "Позориште Бошко Буха",
-    12 => "КПГТ",
-    13 => "Академија 28",
-    14 => "Битеф Театар"
-];
+require_once("primer4503podaci.php");
 
 //foreach($pozorista as $key => $value){
 //    echo $key .' - ' .$value. '<br>';
@@ -49,7 +34,17 @@ foreach ($pozorista as $key => $value) : ?>
     </a>
 <?php
 endforeach;
+
+if(isset($_SESSION['kupovine'])){
+foreach ($_SESSION['kupovine'] as $kupovina) : ?>
+    <p>Име позоришта: <?= $pozorista[$kupovina['id']]['ime'] ?></p>
+    <p>Укупна цена: <?= $kupovina['cena'] ?></p>
+    <p>Број карата: <?= $kupovina['brKarata'] ?></p>
+<?php
+endforeach;
+}
 ?>
+
 
 <!-- 
     <img src="pozorista/1.png">
