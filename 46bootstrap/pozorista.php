@@ -1,4 +1,4 @@
-<?php include_once('header.php'); ?>
+<?php include ('header.php'); ?>
 
 <!-- Portfolio Section-->
 <section class="page-section portfolio mt-5" id="portfolio">
@@ -20,4 +20,4 @@
     </div>
 </section>
 
-<?php include_once('footer.php'); ?>
+<?php include('footer.php'); ?>

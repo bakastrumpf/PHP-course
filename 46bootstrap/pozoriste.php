@@ -1,9 +1,13 @@
 <?php 
 include_once('header.php'); 
-$id =$_GET['id'];
-$naziv_pozorista = $pozorista[$id];
+$id =$_GET['id'];   // dohvatamo id pozorišta
+$naziv_pozorista = $pozorista[$id];     // dohvatamo naziv pozorišta
 
-$predstave_pozorista = array_filter($predstave, function($elem) use ($id) {
+// filtriramo samo predstave pozorišta sa datim ID
+$predstave_pozorista = array_filter($predstave, function($elem) use ($id ) {
+    // vrati samo elemente kod kojih je id_pozorišta jednaka zadatom ID
+    // pošto ova funkcija ne vidi ID koji se pribavlja kroz GET
+    // mora joj se eksplicitno zadati da koristi ID kroz USE($id)
     return $elem['id_pozorista'] == $id;
 });
 // var_dump($predstave_pozorista);
