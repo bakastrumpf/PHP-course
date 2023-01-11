@@ -28,15 +28,22 @@ if ($_SESSION['user_type'] == 1) {
     <div style="float:right">
         <a href="primer4705logout.php">Odjava</a>
     </div>
-    <?php
-    include_once 'primer4706akcije.php';
-    while ($red = mysqli_fetch_assoc($akcije)) {
-        echo $red['destinacija'];
-        echo $red['tip'];
-        echo $red['cena'];
-        echo "<br/>";
-    }
-    ?>
+    <table>
+        <tr>
+            <th>Destinacija</th>
+            <th>Tip</th>
+            <th>Cena</th>
+            <th>Period</th>
+        </tr>
+        <?php
+        include_once 'primer4706akcije.php';
+        while ($red = mysqli_fetch_array($akcije)) {
+            echo "<tr><td>{$red['destinacija']}</td>";
+            echo "<td>{$red['tip']}</td>";
+            echo "<td>{$red['cena']}</td>";
+            echo "<td>{$red['period']}</td></tr>";
+        }
+        ?>
 </body>
 
 </html>
