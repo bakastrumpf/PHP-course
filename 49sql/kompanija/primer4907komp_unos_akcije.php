@@ -1,5 +1,5 @@
 <?php
-    include_once('primer4911header.inc.php')
+include_once('primer4911header.inc.php')
 ?>
 
 <h1>Forma za unos nove akcije</h1>
@@ -30,12 +30,12 @@
             }
         } else {
             price.addEventListener("focus", myFocusFunct2, true);
+        }
     }
-}
 </script>
 
 <?php
-    require_once("primer4908kompanija_meni.inc.php");
+require_once("primer4908kompanija_meni.inc.php");
 ?>
 
 <fieldset>
@@ -68,7 +68,7 @@
 </fieldset>
 
 <?php
-if(!empty($_SESSION['msg'])){
+if (!empty($_SESSION['msg'])) {
     echo $_SESSION['msg'];
     $_SESSION['msg'] = "";
 }

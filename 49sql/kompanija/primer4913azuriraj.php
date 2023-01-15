@@ -1,18 +1,14 @@
-<?php
-include_once('primer4911header.inc.php')
-?>
+<?php include_once('primer4911header.inc.php') ?>
 
 <h1>Forma za izmenu putovanja</h1>
 
-<?php
-require_once("primer4908kompanija_meni.inc.php");
-?>
+<?php require_once("primer4908kompanija_meni.inc.php"); ?>
 
 <?php
 if (!empty($_GET['id'])) {
     echo "Menjamo putovanje ID={$_GET['id']}";
 
-    require_once("../primer4910config.inc.php");
+require_once("../primer4910config.inc.php");
 
     $upit = "SELECT * FROM akcija WHERE idponude={$_GET['id']}";
 
@@ -26,69 +22,64 @@ if (!empty($_GET['id'])) {
 
 ?>
 
-    <fieldset style="width: 500px">
-        <form name="update_trip" id="update_trip" method="post" 
-        action="primer4914update_trip.php">
-            <input type="hidden" id="id" name="id" value="<?php echo $red[0]; ?>"/>
-            Destinacija:
-            <input type="text" id="destination" name="destination" size="32" 
-            placeholder="Unesite odrediste" value="<?php echo $red[1]; ?>" />
-            <br>
+<fieldset style="width: 500px">
+    <form name="update_trip" id="update_trip" method="post" action="primer4914update_trip.php">
+        <input type="hidden" id="id" name="id" value="<?php echo $red[0]; ?>" />
+        Destinacija:
+        <input type="text" id="destination" name="destination" size="32" placeholder="Unesite odrediste" value="<?php echo $red[1]; ?>" />
+        <br>
 
-            Tip aranžmana:
-            <!-- red[2] je tip -->
-            <select name="type" id="">
+        Tip aranžmana:
+        <!-- red[2] je tip -->
+        <select name="type" id="">
 
-                <?php
-                if ($red[2] == 'aviokarta')
-                    echo "<option selected>aviokarta</option>";
-                else
-                    echo "<option>aviokarta</option>";
+        <?php
+        if ($red[2] == 'aviokarta')
+            echo "<option selected>aviokarta</option>";
+        else
+            echo "<option>aviokarta</option>";
 
-                if ($red[2] == 'hotel')
-                    echo "<option selected>hotel</option>";
-                else
-                    echo "<option>hotel</option>";
+        if ($red[2] == 'hotel')
+            echo "<option selected>hotel</option>";
+        else
+            echo "<option>hotel</option>";
 
-                if ($red[2] == 'brzi voz')
-                    echo "<option selected>brzi voz</option>";
-                else
-                    echo "<option>brzi voz</option>";
+        if ($red[2] == 'brzi voz')
+            echo "<option selected>brzi voz</option>";
+        else
+            echo "<option>brzi voz</option>";
 
-                if ($red[2] == 'vikend aranžman')
-                    echo "<option selected>vikend aranžman</option>";
-                else
-                    echo "<option>vikend aranžman</option>";
+        if ($red[2] == 'vikend aranžman')
+            echo "<option selected>vikend aranžman</option>";
+        else
+            echo "<option>vikend aranžman</option>";
 
-                ?>
-                <!--
+        ?>
+<!--
+    <option>aviokarta</option>
+    <option>hotel</option>
+    <option>aviokarta+hotel</option>
+    <option selected>brzi voz</option>
+-->
+        </select>
+        <br>
 
-                <option>aviokarta</option>
-                <option>hotel</option>
-                <option>aviokarta+hotel</option>
-                <option selected>brzi voz</option>
-    -->
-            </select>
-            <br>
+        Cena:
+        <input type="text" name="price" id="price" size="5" value='<?php echo $red[3] ?>' />
+        <br>
 
-            Cena:
-            <input type="text" name="price" id="price" size="5" value='<?php echo $red[3] ?>' />
-            <br>
+        Period:
+        <input type="text" name="period" size="20" value='<?php echo $red[5] ?>' />
+        <br>
 
-            Period:
-            <input type="text" name="period" size="20" value='<?php echo $red[5] ?>' />
-            <br>
+        <input type="submit" name="submitform" value="IZMENI" />
 
-            <input type="submit" name="submitform" value="UNESI" />
-
-        </form>
-    </fieldset>
+    </form>
+</fieldset>
 
 <?php
-
-    }
-}
-
+    }  // if broj redova
+}   // if ID
 ?>
 
 <div>
@@ -99,4 +90,5 @@ if (!empty($_GET['id'])) {
     }
 
     ?>
+    
 </div>

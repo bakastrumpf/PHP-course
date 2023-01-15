@@ -21,7 +21,6 @@ include_once('primer4908kompanija_meni.inc.php');
             <th> IZMENI </th>
         </tr>
 
-
         <?php
         include_once 'primer4906akcije.php';
         while ($red = mysqli_fetch_array($akcije)) {
@@ -32,8 +31,7 @@ include_once('primer4908kompanija_meni.inc.php');
             echo "<td>{$red['cena']}</td>";
             echo "<td>{$red['period']}</td>";
             echo "<td><a href='primer4912obrisi_akciju.php?id=" . $red['idponude'] . "&mesto=" . $red['destinacija'] . " '> X </a> </td>";
-            echo "<td><a href='primer4913azuriraj.php?id=". $red['idponude']."'><img src='index.png'/> </a></td>";
-
+            echo "<td><a href='primer4913azuriraj.php?id=" . $red['idponude'] . "'><img src='index.png'/> </a></td>";
             echo "</tr>";
         }
         ?>
@@ -47,6 +45,5 @@ include_once('primer4908kompanija_meni.inc.php');
         echo $_SESSION['msg'];
         $_SESSION['msg'] = "";
     }
-
     ?>
 </div>
