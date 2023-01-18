@@ -7,7 +7,7 @@ $user_type = $_POST['user_type'];
 
 $msg = "";
 if (empty($user))
-    $msg .= "Korisnicko ime nije uneto. <br/>";
+    $msg .= "Korisničko ime nije uneto. <br/>";
 if (empty($pass))
     $msg .= "Lozinka nije uneta. <br/>";
 if (empty($user_type))
@@ -15,19 +15,19 @@ if (empty($user_type))
 
 if ($msg != "") {
     $_SESSION['msg'] = $msg;
-    header("Location:primer4801index.php");
+    header("Location:primer5001index.php");
     exit();
 }
 
-echo "Proba";
+// echo "Proba";
 
-// $conn = mysqli_connect("localhost:3306", "USERNAME", "PASSWORD", "akcije2023")
+// $conn = mysqli_connect("localhost:3306", "montekrista", "java2021", "akcije2023")
 //    or die("Greska: " . mysqli_connect_error());
 // izmestamo konekciju na bazu u eksterni fajl
 
-include_once('primer4910config.inc.php');
+include_once('primer5110config.inc.php');
 
-echo "Proba2";
+// echo "Proba2";
 if ($user_type == 1) {
     $sql = "select * from korisnik where userkor = '$user'";
 } else {
@@ -37,30 +37,34 @@ if ($user_type == 1) {
 $result = mysqli_query($conn, $sql)
     or die("Greska: " . mysqli_error($conn));
 
-echo "Proba 3";
+// echo "Proba 3";
 if (mysqli_num_rows($result) > 0) {
     // pronadjen user sa zadatim korisničkim imenom
-    echo "Zdravo";
+    // echo "Zdravo";
     $user_db = mysqli_fetch_assoc($result);
     // var_dump($user_db)
     if ($user_db['pass'] == $pass) {
         $_SESSION['user'] = $user;
         $_SESSION['user_type'] = $user_type;
         if ($user_type == 1) {
-            header("Location:primer4903korisnik.php");
+            $_SESSION['osoba'] = $user_db['ime']." ".$user_db['prezime'];
+            $_SESSION['eposta'] = $user_db['eposta'];
+            header("Location:primer5103korisnik.php");
             exit();
         } else {
-            header("Location:kompanija/primer4904komp.php");
+            $_SESSION['naziv'] = $user_db['naziv'];
+            $_SESSION['adresa'] = $user_db['adresa'];
+            header("Location:kompanija/primer5104komp.php");
             exit();
         }
     } else {
         $_SESSION['user'] = $user;
         $_SESSION['msg'] = "Pogresna lozinka.";
-        header("Location:primer4901index.php");
+        header("Location:primer5101index.php");
         exit();
     }
 } else {
-    $_SESSION['msg'] = "Pogresno korisnicko ime";
-    header("Location:primer4901index.php");
+    $_SESSION['msg'] = "Pogrešno korisničko ime";
+    header("Location:primer5101index.php");
     exit();
 }

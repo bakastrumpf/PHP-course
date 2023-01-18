@@ -15,11 +15,11 @@ if(empty($period))
 
 if($msg != ""){
     $_SESSION['msg'] = $msg;
-    header("Location:primer4907komp_unos_akcije.php");
+    header("Location:primer5007komp_unos_akcije.php");
     exit();
 }
 
-include_once("../primer4910config.inc.php");    // ucitavamo $conn iz eksternog fajla
+include_once("../primer5010config.inc.php");    // ucitavamo $conn iz eksternog fajla
 
 $upit = "insert into akcija(destinacija, tip, cena, danprodaje, period, userkomp) ". 
 "values('$destination', '$type', $price, '$insertdate', '$period', '$autorskakomp')";
@@ -31,7 +31,7 @@ if(mysqli_query($conn, $upit)){
 }
 mysqli_close($conn);
 
-header("Location: primer4907komp_unos_akcije.php");
+header("Location: primer5007komp_unos_akcije.php");
 exit();
 
 ?>

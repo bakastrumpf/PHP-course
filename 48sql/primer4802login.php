@@ -21,7 +21,7 @@ if ($msg != "") {
 
 echo "Proba";
 
-// $conn = mysqli_connect("localhost:3306", "username", "password", "akcije2023")
+// $conn = mysqli_connect("localhost:3306", "USERNAME", "PASSWORD", "DB")
 //    or die("Greska: " . mysqli_connect_error());
 // izmestamo konekciju na bazu u eksterni fajl
 

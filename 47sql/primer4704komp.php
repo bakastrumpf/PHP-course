@@ -44,7 +44,6 @@ if ($_SESSION['user_type'] == 1) {
             echo "<td>{$red['period']}</td></tr>";
         }
         ?>
-    </table>
 </body>
 
 </html>

@@ -3,10 +3,10 @@ session_start();
 
 if(!empty($_SESSION['user_type'])){
     if($_SESSION['user_type'] == 1){
-        header("Location:primer4703korisnik.php");
+        header("Location:primer5103korisnik.php");
         exit();
     } else {
-        header("Location:primer4704komp.php");
+        header("Location:kompanija/primer5104komp.php");
         exit();
     }
 }
@@ -19,7 +19,7 @@ if(!empty($_SESSION['user_type'])){
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="Prekvalifikacije, ETF, PHP, html5">
-    <meta name="author" content="TŠ | MS">
+    <meta name="author" content="DD | MS">
     <meta name="description" content="PHP: PHP & MySQL">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,9 +32,9 @@ if(!empty($_SESSION['user_type'])){
         echo "<span style='color:red'>" . $_SESSION['msg'] . "</span>";
     ?>
     <fieldset style="width: 250px;">
-        <form name="login" method="post" action="primer4702login.php">
+        <form name="login" method="post" action="primer5102login.php">
             Korisničko ime:
-            <input type="text" name="username" value="<?= $_SESSION['user'] ?? "" ?>">
+            <input type="text" name="username" value="<?= $_SESSION['user'] ?? '' ?>">
             <br>
             Lozinka:
             <input type="password" name="password">

@@ -15,18 +15,14 @@ if (empty($user_type))
 
 if ($msg != "") {
     $_SESSION['msg'] = $msg;
-    header("Location:primer4801index.php");
+    header("Location:primer4701index.php");
     exit();
 }
 
 echo "Proba";
 
-// $conn = mysqli_connect("localhost:3306", "USERNAME", "PASSWORD", "akcije2023")
-//    or die("Greska: " . mysqli_connect_error());
-// izmestamo konekciju na bazu u eksterni fajl
-
-include_once('primer4910config.inc.php');
-
+$conn = mysqli_connect("localhost", "USERNAME", "PASSWORD", "DB")
+    or die("Greska: " . mysqli_connect_error());
 echo "Proba2";
 if ($user_type == 1) {
     $sql = "select * from korisnik where userkor = '$user'";
@@ -47,20 +43,20 @@ if (mysqli_num_rows($result) > 0) {
         $_SESSION['user'] = $user;
         $_SESSION['user_type'] = $user_type;
         if ($user_type == 1) {
-            header("Location:primer4903korisnik.php");
+            header("Location:primer4703korisnik.php");
             exit();
         } else {
-            header("Location:kompanija/primer4904komp.php");
+            header("Location:primer4704komp.php");
             exit();
         }
     } else {
         $_SESSION['user'] = $user;
         $_SESSION['msg'] = "Pogresna lozinka.";
-        header("Location:primer4901index.php");
+        header("Location:primer4701index.php");
         exit();
     }
 } else {
     $_SESSION['msg'] = "Pogresno korisnicko ime";
-    header("Location:primer4901index.php");
+    header("Location:primer4701index.php");
     exit();
 }

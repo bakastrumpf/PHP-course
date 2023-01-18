@@ -1,6 +1,6 @@
 <?php
 session_start();
 session_destroy();
-header("Location:primer4801index.php");
+header("Location:primer5001index.php");
 
 ?>

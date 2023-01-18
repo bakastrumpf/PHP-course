@@ -1,15 +1,5 @@
 <?php
-session_start();
-if (empty($_SESSION['user_type'])) {
-    header("Location:../primer4801index.php");
-    exit();
-}
-
-if ($_SESSION['user_type'] != 2) {
-    header("Location:../primer4801index.php");
-    exit();
-}
-
+include_once('primer5111header.inc.php')
 ?>
 
 <h1>Forma za unos nove akcije</h1>
@@ -20,7 +10,7 @@ if ($_SESSION['user_type'] != 2) {
     }
 
     function myFocusFunct2() {
-        document.getElementById("price").style.backgroundColor = 'red';
+        document.getElementById("price").style.backgroundColor = 'yellow';
     }
 
     function provera() {
@@ -31,7 +21,7 @@ if ($_SESSION['user_type'] != 2) {
         if (uzorak_dest.test(document.insert_trip.destination.value)) {
 
             if (uzorak_price.test(document.insert_trip.price.value)) {
-                alert("Uspesno");
+                alert("Uspešno");
                 // korak slanja forme na server
                 document.forms['insert_trip'].submit();
             } else {
@@ -40,19 +30,19 @@ if ($_SESSION['user_type'] != 2) {
             }
         } else {
             price.addEventListener("focus", myFocusFunct2, true);
+        }
     }
-}
 </script>
 
 <?php
-    require_once("primer4808kompanija_meni.inc.php");
+require_once("primer5108kompanija_meni.inc.php");
 ?>
 
 <fieldset>
-    <form name="insert_trip" id="insert_trip" method="post" action="primer4809insert_trip.php">
+    <form name="insert_trip" id="insert_trip" method="post" action="primer5109insert_trip.php">
 
         Destinacija:
-        <input type="text" id="destination" name="destination" size="32" placeholder="Unesite odrediste" />
+        <input type="text" id="destination" name="destination" size="32" placeholder="Unesite odredište" />
         <br>
 
         Tip aranžmana:
@@ -78,6 +68,9 @@ if ($_SESSION['user_type'] != 2) {
 </fieldset>
 
 <?php
-echo $_SESSION['msg'];
-$_SESSION['msg'] = "";
+if (!empty($_SESSION['msg'])) {
+    echo $_SESSION['msg'];
+    $_SESSION['msg'] = "";
+}
+
 ?>
