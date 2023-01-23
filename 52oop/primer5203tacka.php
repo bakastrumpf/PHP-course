@@ -30,7 +30,7 @@ class Tacka{
         return [$this->x, $this->y];
     }
 
-    public function rastojanje(Tacka $tacka): int {
+    public function rastojanje(Tacka $tacka): float {
         return sqrt(pow($tacka->x-$this->x, 2) + pow($tacka->y-$this->y, 2));
     }
 
@@ -40,6 +40,27 @@ class Tacka{
         // return "(".$this->x.",".$this->y.")";
     }
 
+    public function __get($name)
+    {
+        if(property_exists($this, $name)){
+            echo "Dohvatam vrednost polja $name ";
+            return $this->$name;
+        }
+        echo "Polje $name ne postoji";
+        return null;
+        
+    }
+
+    public function __set($name, $value)
+    {
+        if(property_exists($this, $name)){
+            echo "Setuje vrednost $name";
+        $this->name = $value;
+        } else {
+            echo "Polje $name ne postoji";
+        }
+        
+    }
 
 }
 
